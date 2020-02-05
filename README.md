@@ -11,6 +11,7 @@ It's going to be completely compiled by our students
   - [Contribution guidelines](#contribution-guidelines)
   - [Support](#support)
   - [Code of conduct](#code-of-conduct)
+  - [License](LICENSE)
 
 
 
