@@ -23,13 +23,15 @@ You can add a question (with an answer), suggest changes.
 
 
 
-## Contribution guidelines
-For making any changes, just following the following steps
+## Contribution guidelines / Steps
+For making any changes (from your local system), just following the following steps
 - fork this repository into your github account (create one if you don't have it yet)
 - clone it to your system (git clone <link>)
+- In the terminal run `git remote add upstream https://github.com/CodingNinjasCodes/InterQues.git` (this is for taking a fresh update of the code anytime in the future)
 - create a new branch from the [Branch Types](#branch-types) below
 - make the changes, commit and push them to your forked repository
 - create a pull request (mark an issue if it resolves one)
+- getting updated code, just run git pull upstream master
 
 
 ##### Branch Types
@@ -38,6 +40,7 @@ For making any changes, just following the following steps
 - correction-*branch name* (Making a correction to an answer/question)
 - upvote-*branch name* (Once you upvote a question)
 - hotfix-*branch name* (fixing something if it doesn't work)
+- struct-*branch name* (for structural additions/changes)
 
 ## Support
 - Send an email directly to arpan(at)codingninjas(dot)in
