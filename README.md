@@ -56,6 +56,12 @@ For making any changes (from your local system), just following the following st
 - Open that folder in **VS Code**, go to *File > Open*.
 - Now you're good to go!
 
+
+
+
+
+
+
 ## Support
 - Send an email directly to arpan(at)codingninjas(dot)in
 
@@ -63,4 +69,4 @@ For making any changes (from your local system), just following the following st
 
 Respect fellow developers, everyone might be at a different stage of skill levels 
  Encourage fellow developers, pass on an opportunity to them, if they've asked something simple, just point them to the right direction in as polite a manner as possible 
- Thank fellow developers if they help you out in any way 
+ Thank fedllow developers if they help you out in any way 
