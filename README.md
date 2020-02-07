@@ -1,4 +1,4 @@
-# InterQues
+# InterQues (https://codingninjascodes.github.io/InterQues)
 This is a collaborative repository aimed at getting tech interview questions and obviously their solutions. This will be written in plain HTML (we might later introduce CSS), although the interview questions could be from any domain.
 
 ### What's amazing?
