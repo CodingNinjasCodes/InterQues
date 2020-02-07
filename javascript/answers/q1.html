@@ -1,0 +1,95 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="JavScript interview questions">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What will the code below output to the console and why?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h3>
+                    Q: What will the code below output to the console and why?
+                </h3>
+                <code>
+                    var myObject = {    <br>
+                    &nbsp; foo: "bar", <br>
+                    &nbsp; func: function() {  <br>
+                    &nbsp;&nbsp; var self = this;    <br>
+                    &nbsp;&nbsp; console.log("outer func:  this.foo = " + this.foo); <br>
+                    &nbsp;&nbsp; console.log("outer func:  self.foo = " + self.foo); <br>
+                    &nbsp;&nbsp; (function() {   <br>
+                    &nbsp;&nbsp;&nbsp; console.log("inner func:  this.foo = " + this.foo); <br>
+                    &nbsp;&nbsp;&nbsp; console.log("inner func:  self.foo = " + self.foo); <br>
+                    &nbsp;&nbsp; }());   <br>
+                    &nbsp; }   <br>
+                    };  <br>
+                    myObject.func();    <br>
+                </code>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>The above code will output the following to the console:</p>
+                <code>
+                    outer func:  this.foo = bar <br>
+                    outer func:  self.foo = bar <br>
+                    inner func:  this.foo = undefined <br>
+                    inner func:  self.foo = bar <br>
+                </code>
+                <p>
+                    In the outer function, both <code>this</code>  and <code>self</code> refer to myObject and therefore 
+                    both can properly reference and access <code>foo</code>. <br>
+                    In the inner function, though, <code>this</code> no longer refers to <code>myObject</code>. As a 
+                    result, <code>this.foo</code> is undefined in the inner function, whereas the reference 
+                    to the local variable <code>self</code> remains in scope and is accessible there.
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
