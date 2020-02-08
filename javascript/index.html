@@ -65,6 +65,8 @@
                     inner func:  this.foo = undefined <br>
                     inner func:  self.foo = bar <br>
                 </code>
+
+
                 <p>
                     In the outer function, both <code>this</code>  and <code>self</code> refer to myObject and therefore 
                     both can properly reference and access <code>foo</code>. <br>
@@ -72,6 +74,49 @@
                     result, <code>this.foo</code> is undefined in the inner function, whereas the reference 
                     to the local variable <code>self</code> remains in scope and is accessible there.
                 </p>
+            </li>
+            <li>
+
+
+
+                <h4>
+                Predict the output on the console for the following JavaScript code.
+                </h4>
+              <code>
+
+               
+                function geek() { <br>
+                    &nbsp;  if(true)&nbsp;{ <br>
+                        &nbsp;      var a = 5; <br>
+                    } <br>
+                    document.write(a); 
+                <br>}
+                 <br>
+                geek();
+                </code>
+
+
+                <br>
+                <br>
+                <strong>Answer:</strong> 
+                <p>The above code will output the following to the console:</p>
+                <code>
+                    outer func:  this.foo = bar <br>
+                    outer func:  self.foo = bar <br>
+                    inner func:  this.foo = undefined <br>
+                    inner func:  self.foo = bar <br>
+                </code>
+
+                <p>
+                   <h4> Explanation</h4>: In JavaScript, the scope of
+                    <code> variables </code>is not changed in conditional
+                     statements and <code>loops</code>.<br> Scope is only
+                     changed in case of<code> functions</code>, therefore a 
+                     is defined even outside the <code>‘if’</code>
+                     conditional block.
+                </p>
+ 
+
             </li>
         </ol>
         
