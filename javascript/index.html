@@ -73,6 +73,36 @@
                     to the local variable <code>self</code> remains in scope and is accessible there.
                 </p>
             </li>
+            <li>
+                <h4>
+                    How would you use a closure to create a private counter?
+                </h4>
+                <br>
+                <strong>Answer:</strong>
+                <p>You can create a function within an outer function (a closure) that allows you to update a private variable but the variable wouldn't be accessible from outside the function without the use of a helper function.</p>
+                <code>
+                    function counter() {<br>
+                        var _counter = 0;<br>
+                        // return an object with several functions that allow you<br>
+                        // to modify the private _counter variable<br>
+                        return {<br>
+                          add: function(increment) { _counter += increment; },<br>
+                          retrieve: function() { return 'The counter is currently at: ' + _counter; }<br>
+                        }<br>
+                      }<br>
+                      
+                      // error if we try to access the private variable like below<br>
+                      // _counter;<br>
+                      
+                      // usage of our counter function<br>
+                      var c = counter();<br>
+                      c.add(5); <br>
+                      c.add(9); <br>
+                      
+                      // now we can access the private variable in the following way<br>
+                      c.retrieve(); // => The counter is currently at: 14<br>
+                </code>
+            </li>
         </ol>
         
     </body>
