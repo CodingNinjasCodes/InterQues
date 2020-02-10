@@ -8,7 +8,6 @@
         // console.log(data);
 
         var body = document.getElementsByTagName("body")[0];
-        
         var tbl = document.createElement("table");
         var tblBody = document.createElement("tbody");
 
