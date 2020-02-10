@@ -1,0 +1,82 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What will be the output of the code below?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What will be the output of the code below?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    What will be the output of the code below?
+                </h4>
+                <code>
+                    var x = { foo : 1};    <br>
+                    var output = (function(){ <br>
+                    &nbsp;&nbsp; delete x.foo;  <br>
+                    &nbsp;&nbsp; return x.foo;    <br>
+                    &nbsp; })(); <br>
+                    <br>
+                    console.log(output);<br>
+                </code>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>The above code will output the following to the console:</p>
+                <code>
+                    undefined <br>
+                </code>
+                <p>
+                    The <code>delete</code> operator is used to delete the property of an object.<br> Here, <code>x</code> is an object which has the property <code>foo</code>, and as it is a self-invoking function, we will delete the <code>foo</code> property from object <code>x</code>.<br> After doing so, when we try to reference a deleted property <code>foo</code>, the result is <code>undefined</code>.<br>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
