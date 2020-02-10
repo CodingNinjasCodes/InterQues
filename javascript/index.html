@@ -1,115 +1,125 @@
 <html>
-    <head>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
-        <script>
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'UA-157837769-1');
-        </script>
-        
-        <title>
-            JavaScript | InterQues | Coding Ninjas
-        </title>
+    </script>
 
-        <link rel="shortcut icon" type="image/png" href="../assets/favicon.png"/>
+    <title>
+        JavaScript | InterQues | Coding Ninjas
+    </title>
 
-        <meta name="description" content="JavScript interview questions">
-    </head>
-    <body>
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png" />
 
-        <div>
-            <img src="../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
-        </div>
+    <meta name="description" content="JavScript interview questions">
+</head>
 
-        <div>
-            <p>
-                <small>
+<body>
 
-                    <a href="../index.html">Home</a>
-                    &gt; JavaScript Questions
-                    
-                </small>
-               
-            </p>
-        </div>
+    <div>
+        <img src="../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+    </div>
 
-        <div>
-            <h3>
-                JavaScript Questions
-            </h3>
-            <p>
-                <em>
-                    Below is a compiled list of JavaScript interview questions that 
-                    will help you conquer that upcoming interview of yours!
-                </em>
-            </p>
-        </div>
+    <div>
+        <p>
+            <small>
 
-        <ol>
-            <li>
-                <a href="./answers/q1.html">
-                    <h4>
-                        What will the code below output to the console and why?
-                    </h4>
-                    <code>
-                        var myObject = {    <br>
-                        &nbsp; foo: "bar", <br>
-                        &nbsp; func: function() {  <br>
-                        &nbsp;&nbsp; var self = this;    <br>
-                        &nbsp;&nbsp; console.log("outer func:  this.foo = " + this.foo); <br>
-                        &nbsp;&nbsp; console.log("outer func:  self.foo = " + self.foo); <br>
-                        &nbsp;&nbsp; (function() {   <br>
-                        &nbsp;&nbsp;&nbsp; console.log("inner func:  this.foo = " + this.foo); <br>
-                        &nbsp;&nbsp;&nbsp; console.log("inner func:  self.foo = " + self.foo); <br>
-                        &nbsp;&nbsp; }());   <br>
-                        &nbsp; }   <br>
-                        };  <br>
-                        myObject.func();    <br>
-                    </code>
+                <a href="../index.html">Home</a>
+                &gt; JavaScript Questions
 
-                </a>
-            </li>
-            <li>
-                <a href="./answers/closure1.html">
-                    <h4>
-                        What do you understand by Closures in JavaScript?
-                    </h4>
-                </a>
-            </li>
-            
-            <li>
-                <a href="./answers/q2.html">
-                    <h4>
-                        What will be the output of the code below?
-                    </h4>
-                    <code>
-                        var x = { foo : 1};    <br>
-                        var output = (function(){ <br>
-                        &nbsp;&nbsp; delete x.foo;  <br>
-                        &nbsp;&nbsp; return x.foo;    <br>
-                        &nbsp; })(); <br>
-                        <br>
-                        console.log(output);<br>
-                    </code>
+            </small>
 
-                </a>
-            </li>
+        </p>
+    </div>
 
-            <li>
-                <a href="./answers/q3.html">
-                    <h4>
-                        Explain few difference between null, undefined or undeclared JavaScript variable?
-                    </h4>
-                
+    <div>
+        <h3>
+            JavaScript Questions
+        </h3>
+        <p>
+            <em>
+                Below is a compiled list of JavaScript interview questions that
+                will help you conquer that upcoming interview of yours!
+            </em>
+        </p>
+    </div>
 
-                </a>
-            </li>
+    <ol>
+        <li>
+            <a href="./answers/q1.html">
+                <h4>
+                    What will the code below output to the console and why?
+                </h4>
+                <code>
+                    var myObject = { <br>
+                    &nbsp; foo: "bar", <br>
+                    &nbsp; func: function() { <br>
+                    &nbsp;&nbsp; var self = this; <br>
+                    &nbsp;&nbsp; console.log("outer func: this.foo = " + this.foo); <br>
+                    &nbsp;&nbsp; console.log("outer func: self.foo = " + self.foo); <br>
+                    &nbsp;&nbsp; (function() { <br>
+                    &nbsp;&nbsp;&nbsp; console.log("inner func: this.foo = " + this.foo); <br>
+                    &nbsp;&nbsp;&nbsp; console.log("inner func: self.foo = " + self.foo); <br>
+                    &nbsp;&nbsp; }()); <br>
+                    &nbsp; } <br>
+                    }; <br>
+                    myObject.func(); <br>
+                </code>
 
+            </a>
+        </li>
+        <li>
+            <a href="./answers/closure1.html">
+                <h4>
+                    What do you understand by Closures in JavaScript?
+                </h4>
+            </a>
+        </li>
 
-        </ol>
-        
-    </body>
+        <li>
+            <a href="./answers/q2.html">
+                <h4>
+                    What will be the output of the code below?
+                </h4>
+                <code>
+                    var x = { foo : 1}; <br>
+                    var output = (function(){ <br>
+                    &nbsp;&nbsp; delete x.foo; <br>
+                    &nbsp;&nbsp; return x.foo; <br>
+                    &nbsp; })(); <br>
+                    <br>
+                    console.log(output);<br>
+                </code>
+
+            </a>
+        </li>
+
+        <li>
+            <a href="./answers/q3.html">
+                <h4>
+                    Explain few difference between null, undefined or undeclared JavaScript variable?
+                </h4>
+            </a>
+        </li>
+
+        <li>
+            <a href="./answers/q4.html">
+                <h4>
+                    What are JavaScript Promises?
+                </h4>
+            </a>
+        </li>
+    </ol>
+
+</body>
+
 </html>
