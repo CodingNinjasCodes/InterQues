@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<body>
+<code>
+#include <bits/stdc++.h>
+using namespace std;
+
+void inc_dec(int* arr, int n)
+{
+    int *inc=new int[n];
+    int* dec=new int[n];
+    inc[0]=1;
+    dec[0]=1;
+    int k1=0, k2=0;
+    for(int i=1;i<n;i++)
+    {
+        if(arr[i]>arr[i-1])
+        {
+            inc[i]=inc[i-1]+1;
+            if(dec[i-1]>1)
+            {
+                k1++;
+            }
+            dec[i]=1;
+        }
+        else{
+            dec[i]=dec[i-1]+1;
+            if(inc[i-1]>1)
+            {
+                k2++;
+            }
+            inc[i]=1;
+        }
+
+    }
+    if(arr[n-1]>arr[n-2])
+    {
+        k2++;
+    }
+    else
+    {
+        k1++;
+    }
+    cout<<"inc "<<k2<<" "<<"dec"<<k1;
+
+}
+
+int main() {
+    int n;
+    cin>>n;
+    int* arr=new int[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+
+    inc_dec(arr, n);
+    return 0;
+}
+</code>
+</body>
+
