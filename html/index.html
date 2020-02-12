@@ -9,20 +9,126 @@
         gtag('js', new Date());
         gtag('config', 'UA-157837769-1');
         </script>
-
+        
         <title>
-            HTML | InterQues | Coding Ninjas
+            JavaScript | InterQues | Coding Ninjas
         </title>
 
         <link rel="shortcut icon" type="image/png" href="../assets/favicon.png"/>
+        <link rel="stylesheet" href="../assets/css/questions-list-style.css">
 
-        <meta name="description" content="HTML interview questions">
+        <meta name="description" content="JavScript interview questions">
     </head>
     <body>
 
         <div>
             <img src="../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
         </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../index.html">Home</a>
+                    &gt; JavaScript Questions
+                    
+                </small>
+               
+            </p>
+        </div>
+
+        <div>
+            <h3>
+                JavaScript Questions
+            </h3>
+            <p>
+                <em>
+                    Below is a compiled list of JavaScript interview questions that 
+                    will help you conquer that upcoming interview of yours!
+                </em>
+            </p>
+        </div>
+
+        <ol class='questions-list'>
+            <li>
+                <a href="./answers/dakshkhetan-q1.html">
+                    <h4>
+                        What will the code below output to the console and why?
+                    </h4>
+                    <code>
+                        var myObject = {    <br>
+                        &nbsp; foo: "bar", <br>
+                        &nbsp; func: function() {  <br>
+                        &nbsp;&nbsp; var self = this;    <br>
+                        &nbsp;&nbsp; console.log("outer func:  this.foo = " + this.foo); <br>
+                        &nbsp;&nbsp; console.log("outer func:  self.foo = " + self.foo); <br>
+                        &nbsp;&nbsp; (function() {   <br>
+                        &nbsp;&nbsp;&nbsp; console.log("inner func:  this.foo = " + this.foo); <br>
+                        &nbsp;&nbsp;&nbsp; console.log("inner func:  self.foo = " + self.foo); <br>
+                        &nbsp;&nbsp; }());   <br>
+                        &nbsp; }   <br>
+                        };  <br>
+                        myObject.func();    <br>
+                    </code>
+
+                </a>
+            </li>
+            <li>
+                <a href="./answers/arunsridher-q2.html">
+                    <h4>
+                        What do you understand by Closures in JavaScript?
+                    </h4>
+                </a>
+            </li>
+            
+            <li>
+                <a href="./answers/pratik-dutta-q3.html">
+                    <h4>
+                        What will be the output of the code below?
+                    </h4>
+                    <code>
+                        var x = { foo : 1};    <br>
+                        var output = (function(){ <br>
+                        &nbsp;&nbsp; delete x.foo;  <br>
+                        &nbsp;&nbsp; return x.foo;    <br>
+                        &nbsp; })(); <br>
+                        <br>
+                        console.log(output);<br>
+                    </code>
+
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/Sonu-kumar-web-q4.html">
+                    <h4>
+                        Explain few difference between null, undefined or undeclared JavaScript variable?
+                    </h4>
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/Dhanu084-q5.html">
+                    <h4>What are escape Sequences?</h4>
+                </a>
+            </li>
+
+		    <li>
+                <a href="./answers/Piyush-zlatan-q6.html">
+                <h4>
+                    How would you use a closure to create a private counter?
+                </h4>
+            </li>
+
+            <li>
+                <a href="./answers/priyanka-agrahari-q7.html">
+                    <h4>
+                        What do you mean by Event Bubbling and Event Capturing?
+                    </h4>
+                
+                </a>
+            </li>
+        </ol>
         
     </body>
 </html>
