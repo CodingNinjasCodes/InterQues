@@ -1,4 +1,4 @@
-# InterQues
+# InterQues (https://codingninjascodes.github.io/InterQues)
 This is a collaborative repository aimed at getting tech interview questions and obviously their solutions. This will be written in plain HTML (we might later introduce CSS), although the interview questions could be from any domain.
 
 ### What's amazing?
@@ -27,7 +27,7 @@ You can add a question (with an answer), suggest changes.
 For making any changes (from your local system), just following the following steps
 - fork this repository into your github account (create one if you don't have it yet)
 - clone it to your system (git clone <link>)
-- In the terminal run `git remote add upstream https://github.com/CodingNinjasCodes/InterQues.git` (this is for taking a fresh update of the code anytime in the future)
+- in the terminal run `git remote add upstream https://github.com/CodingNinjasCodes/InterQues.git` (this is for taking a fresh update of the code anytime in the future)
 - create a new branch from the [Branch Types](#branch-types) below
 - make the changes, commit and push them to your forked repository
 - create a pull request (mark an issue if it resolves one)
