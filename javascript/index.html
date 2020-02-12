@@ -15,6 +15,7 @@
         </title>
 
         <link rel="shortcut icon" type="image/png" href="../assets/favicon.png"/>
+        <link rel="stylesheet" href="../assets/css/questions-list-style.css">
 
         <meta name="description" content="JavScript interview questions">
     </head>
@@ -25,55 +26,93 @@
         </div>
 
         <div>
-            <h1>
-                JavaScript | InterQues
-            </h1>
+            <p>
+                <small>
+
+                    <a href="../index.html">Home</a>
+                    &gt; JavaScript Questions
+                    
+                </small>
+               
+            </p>
+        </div>
+
+        <div>
+            <h3>
+                JavaScript Questions
+            </h3>
             <p>
                 <em>
                     Below is a compiled list of JavaScript interview questions that 
-                    will help you seize that upcoming interview of yours!
+                    will help you conquer that upcoming interview of yours!
                 </em>
             </p>
         </div>
 
-        <ol>
+        <ol class='questions-list'>
             <li>
-                <h4>
-                    What will the code below output to the console and why?
-                </h4>
-                <code>
-                    var myObject = {    <br>
-                    &nbsp; foo: "bar", <br>
-                    &nbsp; func: function() {  <br>
-                    &nbsp;&nbsp; var self = this;    <br>
-                    &nbsp;&nbsp; console.log("outer func:  this.foo = " + this.foo); <br>
-                    &nbsp;&nbsp; console.log("outer func:  self.foo = " + self.foo); <br>
-                    &nbsp;&nbsp; (function() {   <br>
-                    &nbsp;&nbsp;&nbsp; console.log("inner func:  this.foo = " + this.foo); <br>
-                    &nbsp;&nbsp;&nbsp; console.log("inner func:  self.foo = " + self.foo); <br>
-                    &nbsp;&nbsp; }());   <br>
-                    &nbsp; }   <br>
-                    };  <br>
-                    myObject.func();    <br>
-                </code>
-                <br>
-                <strong>Answer:</strong> 
-                <p>The above code will output the following to the console:</p>
-                <code>
-                    outer func:  this.foo = bar <br>
-                    outer func:  self.foo = bar <br>
-                    inner func:  this.foo = undefined <br>
-                    inner func:  self.foo = bar <br>
-                </code>
-                <p>
-                    In the outer function, both <code>this</code>  and <code>self</code> refer to myObject and therefore 
-                    both can properly reference and access <code>foo</code>. <br>
-                    In the inner function, though, <code>this</code> no longer refers to <code>myObject</code>. As a 
-                    result, <code>this.foo</code> is undefined in the inner function, whereas the reference 
-                    to the local variable <code>self</code> remains in scope and is accessible there.
-                </p>
+                <a href="./answers/q1.html">
+                    <h4>
+                        What will the code below output to the console and why?
+                    </h4>
+                    <code>
+                        var myObject = {    <br>
+                        &nbsp; foo: "bar", <br>
+                        &nbsp; func: function() {  <br>
+                        &nbsp;&nbsp; var self = this;    <br>
+                        &nbsp;&nbsp; console.log("outer func:  this.foo = " + this.foo); <br>
+                        &nbsp;&nbsp; console.log("outer func:  self.foo = " + self.foo); <br>
+                        &nbsp;&nbsp; (function() {   <br>
+                        &nbsp;&nbsp;&nbsp; console.log("inner func:  this.foo = " + this.foo); <br>
+                        &nbsp;&nbsp;&nbsp; console.log("inner func:  self.foo = " + self.foo); <br>
+                        &nbsp;&nbsp; }());   <br>
+                        &nbsp; }   <br>
+                        };  <br>
+                        myObject.func();    <br>
+                    </code>
+
+                </a>
             </li>
             <li>
+                <a href="./answers/closure1.html">
+                    <h4>
+                        What do you understand by Closures in JavaScript?
+                    </h4>
+                </a>
+            </li>
+            
+            <li>
+                <a href="./answers/q2.html">
+                    <h4>
+                        What will be the output of the code below?
+                    </h4>
+                    <code>
+                        var x = { foo : 1};    <br>
+                        var output = (function(){ <br>
+                        &nbsp;&nbsp; delete x.foo;  <br>
+                        &nbsp;&nbsp; return x.foo;    <br>
+                        &nbsp; })(); <br>
+                        <br>
+                        console.log(output);<br>
+                    </code>
+
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/q3.html">
+                    <h4>
+                        Explain few difference between null, undefined or undeclared JavaScript variable?
+                    </h4>
+                
+
+                </a>
+            </li>
+            <li>
+                <a href="./answers/q5.html"><h4>What are escape Sequences?</h4></a>
+            </li>
+
+             <li>
                 <a href="./answers/q8.html"><h4>What is generator in JS?</h4></a>
             </li>
         </ol>
