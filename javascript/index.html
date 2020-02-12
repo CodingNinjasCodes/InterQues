@@ -26,11 +26,11 @@
 
         <div>
             <h1>
-                JavaScript | InterQues
+                CSS | InterQues
             </h1>
             <p>
                 <em>
-                    Below is a compiled list of JavaScript interview questions that 
+                    Below is a compiled list of CSS interview questions that 
                     will help you seize that upcoming interview of yours!
                 </em>
             </p>
@@ -39,38 +39,12 @@
         <ol>
             <li>
                 <h4>
-                    What will the code below output to the console and why?
+                    Explain the difference between visibility: hidden and display: none?
                 </h4>
-                <code>
-                    var myObject = {    <br>
-                    &nbsp; foo: "bar", <br>
-                    &nbsp; func: function() {  <br>
-                    &nbsp;&nbsp; var self = this;    <br>
-                    &nbsp;&nbsp; console.log("outer func:  this.foo = " + this.foo); <br>
-                    &nbsp;&nbsp; console.log("outer func:  self.foo = " + self.foo); <br>
-                    &nbsp;&nbsp; (function() {   <br>
-                    &nbsp;&nbsp;&nbsp; console.log("inner func:  this.foo = " + this.foo); <br>
-                    &nbsp;&nbsp;&nbsp; console.log("inner func:  self.foo = " + self.foo); <br>
-                    &nbsp;&nbsp; }());   <br>
-                    &nbsp; }   <br>
-                    };  <br>
-                    myObject.func();    <br>
-                </code>
                 <br>
                 <strong>Answer:</strong> 
-                <p>The above code will output the following to the console:</p>
-                <code>
-                    outer func:  this.foo = bar <br>
-                    outer func:  self.foo = bar <br>
-                    inner func:  this.foo = undefined <br>
-                    inner func:  self.foo = bar <br>
-                </code>
                 <p>
-                    In the outer function, both <code>this</code>  and <code>self</code> refer to myObject and therefore 
-                    both can properly reference and access <code>foo</code>. <br>
-                    In the inner function, though, <code>this</code> no longer refers to <code>myObject</code>. As a 
-                    result, <code>this.foo</code> is undefined in the inner function, whereas the reference 
-                    to the local variable <code>self</code> remains in scope and is accessible there.
+                    <strong>visibility:hidden</strong> hides the element, but it occupies space and affects the layout of the document, for example, you are standing in a queue and you wear the invisible cloak from Harry Potter. People would see an empty space. whereas, <strong>display:none</strong> also hides the element but not occupy space. It will not affect the layout of the document. for example, person in the queue would not exist and won't occupy any space. 
                 </p>
             </li>
         </ol>
