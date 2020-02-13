@@ -51,6 +51,23 @@
                 <p>
                     A <b>Promise</b> is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.
                 </p>
+
+                <code>
+                    let myFirstPromise = new Promise((resolve, reject) => { <br>
+                        &nbsp;// We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.<br>
+                        &nbsp;// In this example, we use setTimeout(...) to simulate async code. <br>
+                        &nbsp;// In reality, you will probably be using something like XHR or an HTML5 API.<br>
+                        &nbsp;setTimeout( function() {<br>
+                            &nbsp;&nbsp;resolve("Success!")  // Yay! Everything went well!<br>
+                            &nbsp;}, 250) <br>
+                            &nbsp;}) <br>
+                      
+                            &nbsp;myFirstPromise.then((successMessage) => {<br>
+                                &nbsp;// successMessage is whatever we passed in the resolve(...) function above.<br>
+                                &nbsp;// It doesn't have to be a string, but if it is only a succeed message, it probably will be.<br>
+                                &nbsp;console.log("Yay! " + successMessage) <br>
+                      });<br>
+                </code>
             </div>
         </div>
 
