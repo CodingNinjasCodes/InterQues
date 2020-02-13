@@ -50,7 +50,16 @@
                 <strong>Answer:</strong> 
                 <p>
                     When you setTimeout it becomes asynchronous and it has to wait on the stack to get everything got finished.
+                    <br>
+                    setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds.
+                    <br>
+                    <b><i>Tip:</i></b>1000 ms = 1 second.
                 </p> 
+                <p> <b><i>Example:</i><br>setTimeout(function(){ alert("Hello"); }, 3000);</b><br>
+                    <i>It will display an alert box after 3 seconds (3000 milliseconds) </i> <br>
+                    <b><i>Tip:</i></b> The function is only executed once. If you need to repeat execution, use the setInterval() method.<br>
+                   <b><i>Tip:</i></b> Use the clearTimeout() method to prevent the function from running.
+                 </p>
             </div>
         </div>
 
