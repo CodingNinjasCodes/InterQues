@@ -1,0 +1,406 @@
+[33mcommit ea45a736f24b57b6681ab9e5e193557c9c6932fe[m[33m ([m[1;36mHEAD -> [m[1;32mnewq[m[33m)[m
+Author: unknown <mounikareddygonae15@gmail.com>
+Date:   Fri Feb 14 02:05:31 2020 +0530
+
+    add new javascript ques
+
+[33mcommit 381d4c0cfa30c36bd11471ba653a9a71058221cd[m[33m ([m[1;31morigin/development[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mdevelopment[m[33m)[m
+Merge: 4848fd0 1382133
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 18:17:22 2020 +0530
+
+    Merge pull request #57 from Dhanu084/newq
+    
+    added new JS question Q5
+
+[33mcommit 1382133320d8dcfb1ef4c29eb991bf0b20adb1f9[m
+Author: Dhanush Kiran K <dhanuu08@gmail.com>
+Date:   Mon Feb 10 18:13:36 2020 +0530
+
+    added new JS question
+
+[33mcommit 3cfd49b694f6a0a4d9ce69bddf32f923c547db3a[m
+Author: Dhanush Kiran K <dhanuu08@gmail.com>
+Date:   Mon Feb 10 17:53:54 2020 +0530
+
+    added new JS question
+
+[33mcommit 4848fd0597540692bae8cebd1fd44b038d78131d[m
+Merge: 4714321 6570576
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 17:06:04 2020 +0530
+
+    Merge pull request #55 from dakshkhetan/struct-noTextDecoration
+    
+    set JavaScript questions' text-decoration to none
+
+[33mcommit 65705766a5fa185e4e00fd478d15dc18964e6fe5[m
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Mon Feb 10 16:58:22 2020 +0530
+
+    set JS questions' text-decoration to none
+
+[33mcommit 44a717384c82a16e234c70032796c1e24f5d16b3[m
+Merge: 93b6620 4714321
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 16:51:04 2020 +0530
+
+    Merge pull request #53 from CodingNinjasCodes/development
+    
+    contributors added!
+
+[33mcommit 47143217ced3d539e6e4061a89fcc41a56642dc8[m
+Merge: 6a828df eb19f59
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 16:50:30 2020 +0530
+
+    Merge pull request #52 from dakshkhetan/struct-contributorsList
+    
+    add list of contributors grid to homepage
+
+[33mcommit eb19f59f095472a15b23e51c234ade8cc757ca0b[m
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Mon Feb 10 16:47:59 2020 +0530
+
+    add list of contributors to homepage
+
+[33mcommit 5bdc7e2c22e3c6dde2ce192e0814f020b1e817bd[m
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Mon Feb 10 16:45:56 2020 +0530
+
+    add contributors grid to homepage
+
+[33mcommit 8c3c36c76f388f43aa96d0a0a9d3eb3e16974fa5[m
+Merge: d107c67 93b6620
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Mon Feb 10 16:43:38 2020 +0530
+
+    pull upstream master
+
+[33mcommit 6a828df69ea9f88b3d683c768537a0f1a6923958[m
+Merge: ec7063f d107c67
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 16:29:35 2020 +0530
+
+    Merge pull request #50 from dakshkhetan/struct-contributors-grid
+    
+    edit contributors-script
+
+[33mcommit d107c671a1f8977c1011ed616a4b854ddef17874[m
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Mon Feb 10 16:18:32 2020 +0530
+
+    edit contributors-script
+
+[33mcommit 93b66208dc962eee6ebeb9309b35114311e643f8[m
+Merge: 1c9cc0f 2b3dc1c
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 16:11:08 2020 +0530
+
+    Merge pull request #48 from CodingNinjasCodes/revert-47-development
+    
+    Revert "Yay! We can now see contributors!"
+
+[33mcommit 2b3dc1c031bf4755e1d8e19e99840279b69dbbb2[m[33m ([m[1;31morigin/revert-47-development[m[33m)[m
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 16:09:59 2020 +0530
+
+    Revert "Yay! We can now see contributors!"
+
+[33mcommit 1c9cc0f05c62486b4ab46b455cfa877d1fca6a10[m
+Merge: 6249d05 ec7063f
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 16:09:35 2020 +0530
+
+    Merge pull request #47 from CodingNinjasCodes/development
+    
+    Yay! We can now see contributors!
+
+[33mcommit ec7063f605ebb7077df161f517573948c1743aa9[m
+Merge: f77074e e83df32
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 16:08:54 2020 +0530
+
+    Merge pull request #46 from dakshkhetan/struct-contributors-grid
+    
+    add contibutors grid on homepage
+
+[33mcommit e83df321959c58af0939dd6016a3d68854fdb1ac[m
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Mon Feb 10 16:03:34 2020 +0530
+
+    add contibutors grid on homepage
+
+[33mcommit 6249d053ba3a6ccbb4f18c95289cab1231ada2d0[m
+Merge: 9d6703f f77074e
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 15:53:51 2020 +0530
+
+    Merge pull request #44 from CodingNinjasCodes/development
+    
+    More questions added!
+
+[33mcommit f77074eacb8797179c0e7999184924be22f9b0f0[m
+Merge: ed1e475 efe8bee
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 15:47:45 2020 +0530
+
+    Merge pull request #43 from Sonu-kumar-web/newq-javascript
+    
+    add new javascript question
+
+[33mcommit ed1e475568e6780249af5046026acd8c54454580[m
+Merge: 747db58 673f9a2
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 15:45:20 2020 +0530
+
+    Merge pull request #41 from arunsridher/development
+    
+    resolved merge conflict
+
+[33mcommit efe8bee31becbb731f0c450bb42abf038ee12a41[m
+Author: Sonu <sonu3660@gmail.com>
+Date:   Mon Feb 10 14:40:17 2020 +0530
+
+    create new repo
+
+[33mcommit 673f9a2cc2ba06034746ed52f7638c8ff6a11468[m
+Merge: d0413ef 747db58
+Author: arunsridher <45627741+arunsridher@users.noreply.github.com>
+Date:   Mon Feb 10 13:42:28 2020 +0530
+
+    merge changes
+
+[33mcommit d0413ef046867e9287751038197c024ce39bc8e9[m
+Author: arunsridher <45627741+arunsridher@users.noreply.github.com>
+Date:   Mon Feb 10 12:46:26 2020 +0530
+
+    add new closure question
+
+[33mcommit 9d6703fab11889ce89fc3d4fc016cc78c57243dc[m
+Merge: c8a51e0 747db58
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 12:29:11 2020 +0530
+
+    Merge pull request #38 from CodingNinjasCodes/development
+    
+    First successful PR by a student!
+
+[33mcommit 747db58bc134fb227109d6ac1f1ade0d10c656ce[m
+Merge: 9227d5e 6f7c22d
+Author: arpansac <arpansac@gmail.com>
+Date:   Mon Feb 10 12:28:17 2020 +0530
+
+    Merge pull request #30 from pratik-dutta/newq-javascriptque
+    
+    Newq javascriptque
+
+[33mcommit 6f7c22d4ecd610cfe4dd195ade204c3a3d9dfb7d[m
+Author: pratik-dutta <pratikdutta.786@gmail.com>
+Date:   Mon Feb 10 11:52:30 2020 +0530
+
+    added JavaScaript Question
+
+[33mcommit e025a5abcab8286e34edad756247235bc138c530[m
+Author: pratik-dutta <pratikdutta.786@gmail.com>
+Date:   Fri Feb 7 23:05:29 2020 +0530
+
+    added JS question
+
+[33mcommit c8a51e007c578a24691949eceb076ced0e57dc03[m
+Merge: 8e30399 9227d5e
+Author: arpansac <arpansac@gmail.com>
+Date:   Fri Feb 7 19:37:05 2020 +0530
+
+    Merge pull request #29 from CodingNinjasCodes/development
+    
+    Updates
+
+[33mcommit 9227d5efc4d0cf67bae39479fe4c15dd641ada16[m
+Merge: 6b2416f c265bca
+Author: arpansac <arpansac@gmail.com>
+Date:   Fri Feb 7 19:36:26 2020 +0530
+
+    Merge pull request #28 from arpansac/struct-questions-index
+    
+    interview questions list page
+
+[33mcommit c265bca3490a46a1b6ee41288ce94194e6868ad2[m
+Author: arpansac <arpansac@gmail.com>
+Date:   Fri Feb 7 19:35:06 2020 +0530
+
+    interview questions list page
+    fix readme
+
+[33mcommit 6b2416f150c5e8edfd2e46575688a4adc6cae034[m
+Merge: bf76cfb 54f7b17
+Author: arpansac <arpansac@gmail.com>
+Date:   Fri Feb 7 18:29:41 2020 +0530
+
+    Merge pull request #25 from arpansac/hotfix-sample
+    
+    Hotfix sample
+
+[33mcommit 54f7b17084958f25d07e4fb2f57e4ae5deaf754c[m
+Author: Coding Ninjas <codingninjasstudio@Codings-Mac-mini.local>
+Date:   Fri Feb 7 18:21:48 2020 +0530
+
+    sample
+
+[33mcommit 8e30399a7668717380e07e57ead0af75602e9e23[m
+Merge: 1048c4a bf76cfb
+Author: arpansac <arpansac@gmail.com>
+Date:   Fri Feb 7 17:50:45 2020 +0530
+
+    Merge pull request #22 from CodingNinjasCodes/development
+    
+    Add question page
+
+[33mcommit bf76cfba45ccf9c70583d7cae14955f1dff4503e[m
+Merge: ac027eb 8ac8b45
+Author: arpansac <arpansac@gmail.com>
+Date:   Fri Feb 7 17:19:38 2020 +0530
+
+    Merge pull request #21 from dakshkhetan/struct-firstQuestion
+    
+    add first JavaScript question
+    
+    closes #21
+
+[33mcommit ac027eb5ee8853ef711dba4cbffe67a8f892f8f2[m
+Merge: ae00648 99ce084
+Author: arpansac <arpansac@gmail.com>
+Date:   Fri Feb 7 17:17:22 2020 +0530
+
+    Merge pull request #20 from dakshkhetan/doc-cloneRepo
+    
+    update README.md
+    #15
+
+[33mcommit 8ac8b4550470ffcd047c8e1fdc36adaa3f90fe23[m
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Fri Feb 7 17:15:00 2020 +0530
+
+    add first JavaScript question
+
+[33mcommit 99ce084b2256f168da80d1d113d8a2fdabd79a3a[m
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Fri Feb 7 17:07:03 2020 +0530
+
+    update README.md
+
+[33mcommit f61ec84e822566b6e256989cc8aa61f29f185efc[m
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Fri Feb 7 16:56:59 2020 +0530
+
+    add logo, favicon & topic-links in index.html
+
+[33mcommit 1048c4a6ac6fd0f151a009505d5864b8af216291[m
+Merge: 80f05ba ae00648
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 15:01:12 2020 +0530
+
+    Merge pull request #13 from CodingNinjasCodes/development
+    
+    GA added
+
+[33mcommit ae00648cc5edca32ebfbaaad379e045587a78dc3[m
+Merge: dd51d92 167a399
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 14:59:39 2020 +0530
+
+    Merge pull request #11 from dakshkhetan/struct-googleAnalyticsScript
+    
+    added google analytics script to all html pages
+
+[33mcommit 167a399b67cf00bdacbcc6cc2cea5370f1a32349[m
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Wed Feb 5 14:41:12 2020 +0530
+
+    added google analytics in editorials/index.html
+
+[33mcommit cf07e1d240ed54d7b63ff9b08de4d6177ced2783[m
+Author: Daksh Khetan <2012daksh@gmail.com>
+Date:   Wed Feb 5 14:31:26 2020 +0530
+
+    added google analytics script in head
+
+[33mcommit 80f05ba926aac3dd05610572cdaae35b13792013[m
+Merge: 81d36b3 dd51d92
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 13:59:44 2020 +0530
+
+    Merge pull request #9 from CodingNinjasCodes/development
+    
+    Development
+
+[33mcommit dd51d9234b1719a4eb94441cb74e7d3263b02ed0[m
+Merge: 8be098a 0c805fd
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 13:58:10 2020 +0530
+
+    Merge pull request #8 from arpansac/struct-directories
+    
+    Struct directories
+
+[33mcommit 0c805fd3f15c4dfef26738af9e3ca788b366691f[m
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 13:52:20 2020 +0530
+
+    add programming question editorials
+
+[33mcommit 21c6e629a651cca086f057b52d45ba294e197655[m
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 13:49:39 2020 +0530
+
+    add index.html and create folder structure for html, css and javascript for now
+
+[33mcommit 2c508157f25e306f48bf716ac77e000ce62a2d75[m
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 13:39:46 2020 +0530
+
+    change readme with git commands
+
+[33mcommit 81d36b37e30e6fabaedab3a3b78bb1f266939202[m
+Merge: d4dd340 8be098a
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 13:26:59 2020 +0530
+
+    Merge pull request #7 from CodingNinjasCodes/development
+    
+    Development
+
+[33mcommit 8be098a595e498bdaa5b5abbb79ec8e4b9717c48[m
+Merge: d4dd340 d52b2e2
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 13:25:36 2020 +0530
+
+    Merge pull request #6 from arpansac/doc-readme
+    
+    Readme populated with initial text
+
+[33mcommit d52b2e293b515f7291157c39415fa01cfc236fd0[m
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 13:19:24 2020 +0530
+
+    add link to license
+    
+    closes #1
+
+[33mcommit 92c596f75f461c73ad45ba7be134a139eb0948e1[m
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 13:16:59 2020 +0530
+
+    complete initial readme
+
+[33mcommit 3fdc31eaf0c5ae4801ec4f83f69e230ab1781fa7[m
+Author: arpansac <arpansac@gmail.com>
+Date:   Wed Feb 5 13:02:20 2020 +0530
+
+    add readme and index of topics
+
+[33mcommit d4dd340d3c66c5e362fbe587793a1394d45bf255[m
+Author: arpansac <arpansac@gmail.com>
+Date:   Tue Feb 4 17:47:07 2020 +0530
+
+    Initial commit
