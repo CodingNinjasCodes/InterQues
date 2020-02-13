@@ -47,9 +47,7 @@
             </div>
             <div>
                 <p>
-                    ‘Strict mode’ is a restricted variant of JavaScript. <br>
-                    But in ‘Strict mode’ it will throw all types of errors, even the silent errors. 
-                    Thus, the process of debugging becomes easier. And the chances for making mistake for the developer is reduced.
+                    ‘Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a “strict” operating context. This strict context prevents certain actions from being taken and throws more exceptions. The statement “use strict”; instructs the browser to use the Strict mode, which is a reduced and safer feature set of JavaScript.
                 </p>
                 <strong>Answer: Given below are the characteristics of JavaScript ‘Strict Mode’:</strong> 
                 <p>
@@ -71,6 +69,25 @@
                             All browser support strict mode.
                         </li>
                     </ul>
+                </p>
+                <p>
+                    <Strong>
+                        Example:
+                    </Strong>
+                    <p>
+                        Without using strict mode you can use variable without declearing it:- <br>
+                        x = 10; <br><br>
+                        console.log(x);<br>
+                        //Text in console = 10
+                    </p>
+                    <p>
+                        When you strict mode you can't use variable without declearing it:- <br>
+                        'use strict';<br><br>
+                        x = 10; <br>
+                        console.log(x);<br>
+                        //error: Uncaught ReferenceError: x is not defined
+                    </p>
+
                 </p>
             </div>
         </div>
