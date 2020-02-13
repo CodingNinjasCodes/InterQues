@@ -1,0 +1,96 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What are escape Sequences?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What is"use strict" in javaScript?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    <h4>What is"use strict" in javaScript?</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    The "use strict" was introduced in ECMAScript version 5.
+                    It is not a statement but a literal expression.
+                    With strict mode you cannot use undeclared variables.
+                    It means that the code is executed in strict mode
+                    and it is declared in 1st line of the script or a function.
+                    Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode)
+                    while declared inside a function, it has local scope (only the code inside the function is in strict mode):
+                    
+                </p>
+                <p>Example 1:</p>
+                <p>
+                    <code>"use strict";</code>
+                    <br>
+                    <code>x=3.14;    //This will cause an error because x is not declared</code>
+                </p>
+                <p>Example 2:</p>
+                <p>
+                    <code>x=3.14;    //This will not cause an error</code>
+                    <br>
+                    <code>function myFunction()
+                        <br>
+                        {
+                            <br>
+                            "use strict";<br>
+                            y=3.14;     //This will cause an error
+                            <br>
+                        }
+                    </code>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
