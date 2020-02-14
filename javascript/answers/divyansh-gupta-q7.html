@@ -1,0 +1,103 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What are the characteristics of JavaScript ‘Strict Mode’?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What are the characteristics of JavaScript ‘Strict Mode’?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h3>
+                    Q: What are the characteristics of JavaScript ‘Strict Mode’?
+                </h3>
+                
+            </div>
+            <div>
+                <p>
+                    ‘Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a “strict” operating context. This strict context prevents certain actions from being taken and throws more exceptions. The statement “use strict”; instructs the browser to use the Strict mode, which is a reduced and safer feature set of JavaScript.
+                </p>
+                <strong>Answer: Given below are the characteristics of JavaScript ‘Strict Mode’:</strong> 
+                <p>
+                    
+                    <ul>
+                        <li>
+                            ‘Strict Mode’ will stop developers from creating global variables.
+                        </li>
+                        <li>
+                            Developers are restricted from using duplicate parameters.
+                        </li>
+                        <li>
+                            Strict mode will restrict you from using JavaScript keyword as a variable name or function name.
+                        </li>
+                        <li>
+                            Strict mode is declared with ‘use strict’ keyword at the beginning of the script.
+                        </li>
+                        <li>
+                            All browser support strict mode.
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    <Strong>
+                        Example:
+                    </Strong>
+                    <p>
+                        Without using strict mode you can use variable without declearing it:- <br>
+                        <code>
+                            x = 10; <br>
+                            console.log(x);<br>
+                            //Text in console = 10
+                        </code>
+                        
+                    </p>
+                    <p>
+                        When you strict mode you can't use variable without declearing it:- <br>
+                        <code>
+                            'use strict';
+                            x = 10; <br>
+                            console.log(x);<br>
+                            //error: Uncaught ReferenceError: x is not defined
+                        </code>
+                        
+                    </p>
+
+                </p>
+            </div>
+        </div>
+
+        <hr>
+    </body>
+</html>
