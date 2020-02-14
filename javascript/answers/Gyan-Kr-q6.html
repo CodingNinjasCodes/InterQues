@@ -1,0 +1,78 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What is SetTimeout()?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What is SetTimeout()?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                   What is SetTimeout()?
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    When you setTimeout it becomes asynchronous and it has to wait on the stack to get everything got finished.
+                    <br>
+                    setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds.
+                    <br>
+                    <b><i>Tip:</i></b>1000 ms = 1 second.
+                </p> 
+                <p> <b><i>Example:</i><br>setTimeout(function(){ alert("Hello"); }, 3000);</b><br>
+                    <i>It will display an alert box after 3 seconds (3000 milliseconds) </i> <br>
+                    <b><i>Tip:</i></b> The function is only executed once. If you need to repeat execution, use the setInterval() method.<br>
+                   <b><i>Tip:</i></b> Use the clearTimeout() method to prevent the function from running.
+                 </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
