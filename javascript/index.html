@@ -15,9 +15,11 @@
         </title>
 
         <link rel="shortcut icon" type="image/png" href="../assets/favicon.png"/>
+        <link rel="stylesheet" href="../assets/css/questions-list-style.css">
 
         <meta name="description" content="JavScript interview questions">
     </head>
+    
     <body>
 
         <div>
@@ -25,54 +27,251 @@
         </div>
 
         <div>
-            <h1>
-                JavaScript | InterQues
-            </h1>
+            <p>
+                <small>
+
+                    <a href="../index.html">Home</a>
+                    &gt; JavaScript Questions
+                    
+                </small>
+               
+            </p>
+        </div>
+
+        <div>
+            <h3>
+                JavaScript Questions
+            </h3>
             <p>
                 <em>
                     Below is a compiled list of JavaScript interview questions that 
-                    will help you seize that upcoming interview of yours!
+                    will help you conquer that upcoming interview of yours!
                 </em>
             </p>
         </div>
 
-        <ol>
+        <ol class='questions-list'>
+
             <li>
-                <h4>
-                    What will the code below output to the console and why?
-                </h4>
-                <code>
-                    var myObject = {    <br>
-                    &nbsp; foo: "bar", <br>
-                    &nbsp; func: function() {  <br>
-                    &nbsp;&nbsp; var self = this;    <br>
-                    &nbsp;&nbsp; console.log("outer func:  this.foo = " + this.foo); <br>
-                    &nbsp;&nbsp; console.log("outer func:  self.foo = " + self.foo); <br>
-                    &nbsp;&nbsp; (function() {   <br>
-                    &nbsp;&nbsp;&nbsp; console.log("inner func:  this.foo = " + this.foo); <br>
-                    &nbsp;&nbsp;&nbsp; console.log("inner func:  self.foo = " + self.foo); <br>
-                    &nbsp;&nbsp; }());   <br>
-                    &nbsp; }   <br>
-                    };  <br>
-                    myObject.func();    <br>
-                </code>
-                <br>
-                <strong>Answer:</strong> 
-                <p>The above code will output the following to the console:</p>
-                <code>
-                    outer func:  this.foo = bar <br>
-                    outer func:  self.foo = bar <br>
-                    inner func:  this.foo = undefined <br>
-                    inner func:  self.foo = bar <br>
-                </code>
-                <p>
-                    In the outer function, both <code>this</code>  and <code>self</code> refer to myObject and therefore 
-                    both can properly reference and access <code>foo</code>. <br>
-                    In the inner function, though, <code>this</code> no longer refers to <code>myObject</code>. As a 
-                    result, <code>this.foo</code> is undefined in the inner function, whereas the reference 
-                    to the local variable <code>self</code> remains in scope and is accessible there.
-                </p>
+                <a href="./answers/dakshkhetan-q1.html">
+                    <h4>
+                        What will the code below output to the console and why?
+                    </h4>
+                    <code>
+                        var myObject = {    <br>
+                        &nbsp; foo: "bar", <br>
+                        &nbsp; func: function() {  <br>
+                        &nbsp;&nbsp; var self = this;    <br>
+                        &nbsp;&nbsp; console.log("outer func:  this.foo = " + this.foo); <br>
+                        &nbsp;&nbsp; console.log("outer func:  self.foo = " + self.foo); <br>
+                        &nbsp;&nbsp; (function() {   <br>
+                        &nbsp;&nbsp;&nbsp; console.log("inner func:  this.foo = " + this.foo); <br>
+                        &nbsp;&nbsp;&nbsp; console.log("inner func:  self.foo = " + self.foo); <br>
+                        &nbsp;&nbsp; }());   <br>
+                        &nbsp; }   <br>
+                        };  <br>
+                        myObject.func();    <br>
+                    </code>
+                </a>
             </li>
+
+            
+            <li>
+                <a href="./answers/arunsridher-q2.html">
+                    <h4>
+                        What do you understand by Closures in JavaScript?
+                    </h4>
+                </a>
+            </li>
+            
+            <li>
+                <a href="./answers/pratik-dutta-q3.html">
+                    <h4>
+                        What will be the output of the code below?
+                    </h4>
+                    <code>
+                        var x = { foo : 1};    <br>
+                        var output = (function(){ <br>
+                        &nbsp;&nbsp; delete x.foo;  <br>
+                        &nbsp;&nbsp; return x.foo;    <br>
+                        &nbsp; })(); <br>
+                        <br>
+                        console.log(output);<br>
+                    </code>
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/Sonu-kumar-web-q4.html">
+                    <h4>
+                        Explain few difference between null, undefined or undeclared JavaScript variable?
+                    </h4>
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/Dhanu084-q5.html">
+                    <h4>What are escape Sequences?</h4>
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/Gyan-Kr-q6.html">
+                	<h4>
+                		What is SetTimeout()?
+                	</h4>
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/ayushk12-q6.html">
+                    <h4>
+                        What is the value of !'bang'?
+                    </h4>
+                </a>
+            </li>
+
+		    <li>
+                <a href="./answers/Piyush-zlatan-q6.html">
+                    <h4>
+                        How would you use a closure to create a private counter?
+                    </h4>
+                </a>
+            </li>
+
+            <li>
+               <a href="./answers/Gauravdwivedi-q7.html">
+                    <h4>
+                        What is NaN? What is its type? How can you reliably test if a value is equal to NaN?
+                    </h4>
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/navneetnp-q7.html">
+                    <h4>
+                        How to empty an array in JavaScript?
+                    </h4>
+                </a>
+            </li>
+
+        
+            <li>
+               <a href="./answers/Gauravdwivedi-q8.html">
+                    <h4>
+                        The following recursive code will cause a stack overflow if the array list is too large. 
+                        How can you fix this and still retain the recursive pattern?
+                    </h4>
+                    <p>
+                        <code>
+                            <br>var list = readHugeList();
+                            <br>var nextListItem = function() {<br>
+                                var item = list.pop();
+                            <br>
+                            <br>if (item) {
+                                <br>// process the list item...
+                                <br>nextListItem();
+                            }<br>
+                            };<br>
+                        </code>
+                    </p>
+                </a>
+            </li>
+              
+            <li>
+                <a href="./answers/divyansh-gupta-q7.html">
+                    <h4>
+                        What are the characteristics of JavaScript ‘Strict Mode’?
+                    </h4>
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/shubhamr238-q7.html">
+                    <h4>
+                        Difference between “var” and “let” Keywords?
+                    </h4>
+                </a>
+            </li>    
+              
+            <li>
+                <a href="./answers/vikas-soam-q7.html">
+                    <h4>
+                        Between JavaScript and an ASP script, which is faster?
+                    </h4>
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/Aman-Manocha-q7.html">
+                    <h4>
+                        What will be the output of the code below ?
+                    </h4>
+                    <code>
+                        var str = "abcd";<br>
+                        str[0] = "b";<br>
+                        console.log(str);<br>
+                    </code>
+                </a>
+            </li>
+                  
+            <li>
+                <a href="./answers/Aman-Manocha-q8.html">
+                    <h4>
+                        What is hoisting in javascript ?
+                    </h4>
+                </a>
+            </li>
+                  
+            <li>
+                <a href="./answers/MounikaReddy15-q7.html">
+                    <h4>
+                        What is Memoization?
+                    </h4>
+                </a>
+            </li>
+
+            <li>
+                <a href="./answers/kunalkr789-q8.html">
+                    <h4>
+                        What is generator in JS?
+                    </h4>
+                </a>
+           </li>
+          
+           <li>
+                <a href="./answers/PriyankaAgrahari-q14.html">
+                    <h4>
+                        What do you mean by Event Bubbling and Event Capturing?
+                    </h4>
+                </a>
+            </li>
+          
+            <li>
+                <a href="./answers/vsumit698-q18.html">
+                    <h4>
+                        Determine the output of following code on console ?
+                     </h4>
+                     <code>
+                        1. var x = 1;<br>
+                        2. function outer(){<br>
+                        3. &nbsp;&nbsp;var y = 2;<br>
+                        4. &nbsp;&nbsp;x++;<br>
+                        5. &nbsp;&nbsp;function inner(){<br>
+                        6. &nbsp;&nbsp;&nbsp;&nbsp;x++;<br>
+                        7. &nbsp;&nbsp;&nbsp;&nbsp;y++;<br>
+                        8. &nbsp;&nbsp;&nbsp;&nbsp;console.log(x,y);<br>
+                        9. &nbsp;&nbsp;} <br>
+                       10. &nbsp;&nbsp;return inner;<br>
+                       11. } <br>
+                       12. var innerFun = outer(); <br>
+                       13. innerFun(); <br>
+                       14. outer(); <br>
+                       15. innerFun(); <br>
+                    </code>
+                </a>
+            </li>
+                  
         </ol>
         
     </body>
