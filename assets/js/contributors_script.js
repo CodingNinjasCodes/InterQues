@@ -12,14 +12,24 @@
         var tblBody = document.createElement("tbody");
 
         var numberOfListItems = data.length;
+        var count = 0;
 
         var row = document.createElement("tr");
 
         for (let i = 0; i < numberOfListItems; i++) {
 
+            count++;
+
+            if(count == 7){
+                console.log(count);
+                count = 1;
+                tblBody.appendChild(row);
+                var row = document.createElement("tr");
+            }
+
             var cell = document.createElement("td");
             cell.style.textAlign = 'center';
-            cell.style.padding = 5 + "px";
+            cell.style.padding = 10 + "px";
 
             let img = document.createElement('img');
             img.src = data[i].avatar_url;
