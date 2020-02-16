@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Programming-editorial | InterQues | Coding Ninjas</title>
+   <link rel="shortcut icon" type="image/png" href="../assets/favicon.png"/>
+</head>
+<body>
+
+ <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+<div>
+    <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">Programming Questions Questions</a>
+                    &gt; Programming Question1
+
+                </small>
+
+            </p>
+        </div>
+          <div>
+                       <a href="https://www.geeksforgeeks.org/count-the-number-of-contiguous-increasing-and-decreasing-subsequences-in-a-sequence/" target="_blank"><strong>Find Solution </strong></a>
+                        <p>Another Approach in code below:</p>
+                        <code style="margin-left: auto">
+                             <br>
+
+                            #include bits/stdc++.h<br>
+                            using namespace std;<br>
+
+                            void inc_dec(int* arr, int n)<br>
+                            {<br>
+                               int *inc=new int[n];<br>
+                               int* dec=new int[n];<br>
+                               inc[0]=1;<br>
+                               dec[0]=1;<br>
+                               int k1=0, k2=0;<br>
+                               for(int i=1;i"<"n;i++)<br>
+                               {<br>
+                                  if(arr[i]>arr[i-1])<br>
+                                  {<br>
+                                      inc[i]=inc[i-1]+1;<br>
+                                      if(dec[i-1]>1)<br>
+                                      {<br>
+                                          k1++;<br>
+                                      }<br>
+                                      dec[i]=1;<br>
+                                  }<br>
+                                  else{<br>
+                                      dec[i]=dec[i-1]+1;<br>
+                                      if(inc[i-1]>1)<br>
+                                      {<br>
+                                          k2++;<br>
+                                      }<br>
+                                      inc[i]=1;<br>
+                                  }<br>
+
+                               }<br>
+                               if(arr[n-1]>arr[n-2])<br>
+                               {<br>
+                                   k2++;<br>
+                               }<br>
+                               else<br>
+                               {<br>
+                                   k1++;<br>
+                               }
+                               <br>
+                              "cout<<"inc "<<"k2<<" "<<"dec"<<"k1;<br>
+
+                            }<br>
+
+                            int main() {<br>
+                            int n;<br>
+                            cin>>n;<br>
+                            int* arr=new int[n];<br>
+                            for(int i=0;i"<"n;i++)<br>
+                            {<br>
+                                cin>>arr[i];<br>
+                            }<br>
+                            <br>
+                            inc_dec(arr, n);<br>
+                            return 0;<br>
+                            }<br>
+                                                </code>
+
+                    </div>
+</body>
+</html>
