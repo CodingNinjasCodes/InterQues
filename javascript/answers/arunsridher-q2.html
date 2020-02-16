@@ -1,0 +1,121 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="JavScript interview questions">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What do you understand by Closures in JavaScript?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h3>
+                    Q: What do you understand by Closures in JavaScript?
+                </h3>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>Closures provide a better, concise, creative, and expressive way of writing code for JavaScript developers and programmers. 
+                    Technically speaking, closures are a combination of lexical environment and function.</p>
+
+                <p>In other words, a closure is a locally declared variable that is related to a function and 
+                    stays in the memory when the related function has returned. All local variables that were 
+                    in-scope at the time of the closure creation are contained by the closure.</p>
+                    
+                <p>Following code snippet demonstrates using a normal function in JavaScript:</p>
+<pre>
+    <code>
+        function greet(message) {
+            console.log(message);
+        }
+        function greeter(name, age) {
+            return name + " says Hey!! He is " + age + " years old";
+        }
+        var message = greeter("Akhil", 26);
+        greet(message);
+    </code>                    
+</pre>
+                <p>
+                    The aforementioned function can be represented in a better way by using closures. 
+                    This is demonstrated in the following code snippet:
+                </p>
+<pre>
+    <code>
+        function greeter(name, age) {
+            var message = name + " says Hey!! He is " + age + " years old";
+            return function greet() {
+            console.log(message);
+            };
+        }
+    </code>
+</pre>
+                
+                <p>// Generate the closure</p>
+<pre>
+    <code>
+        var AkhilGreeter = greeter("Akhil", 26);
+    </code>
+</pre>
+                
+                <p>// Use the closure</p>
+<pre>
+    <code>
+        AkhilGreeter();
+    </code>
+</pre>
+                
+                <p>//or alternatively you can call it in a single line using</p>
+<pre>
+    <code>
+        greeter("akhil", 28)();
+    </code>
+</pre>              
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
