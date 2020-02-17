@@ -46,10 +46,32 @@
                 
             </div>
             
-            
             <div>
                 <strong>Answer:</strong> 
                 <p>An anonymous function can be defined in a similar way as a normal function but it would not have any name.</p>
+                <p>Example</p>
+                <code>
+                    //Example 1
+	                function bob() {
+		            ...
+	                }
+	                bob();
+                    <br>
+	                //Example 2
+	                var bob = function(){
+	            	...
+	                };
+	                bob();
+                </code>
+                <br>
+                <p>
+                    Example 1 creates a <code>function</code> with name "bob". Additionally, a variable named "bob" is created in the current scope and is assigned to the function.
+                </p>
+                
+                <p>
+                Example 2 declares an unnamed <code>function</code> and assigns it to a new variable named "bob".
+                </p>
+                <p>We can see that these two ways of defining a function are essentially the same - both result in a function being created, and a new variable named "bob" assigned to the current scope. However, the second function is <code>anonymous</code>.</p>
                 
             </div>
         </div>
