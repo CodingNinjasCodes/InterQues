@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="The following recursive code will cause a stack overflow if the array list is too large. How can you fix this and still retain the recursive pattern?">
+</head>
+<body>
+<div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt;The following recursive code will cause a stack overflow if the array list is too large. How can you fix this and still retain the recursive pattern?
+
+                </small>
+               
+            </p>
+        </div>
+
+        
+<strong>Answer</strong>
+<p>The potential stack overflow can be avoided by modifying the <code>nextListItem</code> function as follows:</p>
+<code>var list = readHugeList();<br>
+<br>
+var nextListItem = function() {<br>
+   &nbsp; var item = list.pop();<br>
+<br>
+    &nbsp;&nbsp;if (item) {<br>
+        &nbsp;&nbsp;&nbsp;// process the list item...<br>
+        &nbsp;&nbsp;&nbsp;setTimeout( nextListItem, 0);<br>
+    &nbsp;&nbsp;}<br>
+};</code><br>
+
+<p>The stack overflow is eliminated because the event loop handles the recursion, not the call stack. When <code>nextListItem</code> runs, if <code>item</code> is not <code>null</code>, the timeout <code>function (nextListItem)</code> is pushed to the event queue and the function exits, thereby leaving the call stack clear. When the event queue runs its timed-out event, the next <code>item</code> is processed and a timer is set to again invoke nextListItem. Accordingly, the method is processed from start to finish without a direct recursive call, so the call stack remains clear, regardless of the number of iterations.</p>
+            </li>
+
+    </body>
+    </html>
