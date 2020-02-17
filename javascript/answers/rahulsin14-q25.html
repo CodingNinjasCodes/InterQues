@@ -16,7 +16,7 @@
 
         <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
 
-        <meta name="description" content="What is Event-Bubbling?">
+        <meta name="description" content="What is the ‘Strict’ mode in JavaScript and how can it be enabled?">
     </head>
     <body>
 
@@ -30,7 +30,7 @@
 
                     <a href="../../index.html">Home</a>
                     &gt; <a href="../index.html">JavaScript Questions</a>
-                    &gt; What&nbspis&nbspEvent-Bubbling?
+                    &gt; What&nbspis&nbspthe&nbsp‘Strict’&nbspmode&nbspin&nbspJavaScript&nbspand&nbsphow&nbspcan&nbspit&nbspbe&nbspenabled?
 
                 </small>
                
@@ -40,7 +40,7 @@
         <div>
             <div>
                 <h4>
-                    What&nbspis&nbspEvent-Bubbling?
+                    What&nbspis&nbspthe&nbsp‘Strict’&nbspmode&nbspin&nbspJavaScript&nbspand&nbsphow&nbspcan&nbspit&nbspbe&nbspenabled?
                 </h4>
             </div>
             <br>
@@ -48,31 +48,15 @@
             <div>
                 <strong>Answer:</strong> 
                 <p>
-                    When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
-
-                    Let’s say we have 3 nested elements FORM > DIV > P with a handler on each of them:
+                    Strict mode is a way to introduce better error-checking into your code.
+                    <ul>
+                        <li>When you use strict mode, you cannot use implicitly declared variables, or assign a value to a read-only property, or add a property to an object that is not extensible.</li>
+                        <li>You can enable strict mode by adding “use strict” at the beginning of a file, a program, or a function.</li>
+                    </ul>
                
                 </p>
             </div>
         </div>
-        <br>
-             <code>
-                <style>
-                    body * {
-                      margin: 10px;
-                      border: 1px solid blue;
-                    }
-                  </style>
-                  
-                  <form onclick="alert('form')">FORM
-                    <div onclick="alert('div')">DIV
-                      <p onclick="alert('p')">P</p>
-                    </div>
-                  </form>
-             </code>
-             
-             <p>So if we click on p-tag, then we’ll see 3 alerts: p → div → form. </p>
-             <p>The process is called “bubbling”, because events “bubble” from the inner element up through parents like a bubble in the water.</p>
         <hr>
 
         <div>
