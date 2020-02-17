@@ -1,0 +1,82 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What are JavaScript Promises?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What are JavaScript Promises?
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4>What are JavaScript Promises?</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    A <b>Promise</b> is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.
+                </p>
+
+                <code>
+                    let myFirstPromise = new Promise((resolve, reject) => { <br>
+                        &nbsp;// We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.<br>
+                        &nbsp;// In this example, we use setTimeout(...) to simulate async code. <br>
+                        &nbsp;// In reality, you will probably be using something like XHR or an HTML5 API.<br>
+                        &nbsp;setTimeout( function() {<br>
+                            &nbsp;&nbsp;resolve("Success!")  // Yay! Everything went well!<br>
+                            &nbsp;}, 250) <br>
+                            &nbsp;}) <br>
+                      
+                            &nbsp;myFirstPromise.then((successMessage) => {<br>
+                                &nbsp;// successMessage is whatever we passed in the resolve(...) function above.<br>
+                                &nbsp;// It doesn't have to be a string, but if it is only a succeed message, it probably will be.<br>
+                                &nbsp;console.log("Yay! " + successMessage) <br>
+                      });<br>
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
