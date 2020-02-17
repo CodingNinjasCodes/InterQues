@@ -1,0 +1,100 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="How would you use a closure to create a private counter?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; How would you use a closure to create a private counter?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    How would you use a closure to create a private counter?
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <br>
+                <strong>Answer:</strong>
+                <p>You can create a function within an outer function (a closure) that allows you to update a private variable but the variable wouldn't be accessible from outside the function without the use of a helper function.</p>
+                <code>
+                    function counter() {<br>
+                        var _counter = 0;<br>
+                        // return an object with several functions that allow you<br>
+                        // to modify the private _counter variable<br>
+                        return {<br>
+                          add: function(increment) { _counter += increment; },<br>
+                          retrieve: function() { return 'The counter is currently at: ' + _counter; }<br>
+                        }<br>
+                      }<br>
+                      
+                      // error if we try to access the private variable like below<br>
+                      // _counter;<br>
+                      
+                      // usage of our counter function<br>
+                      var c = counter();<br>
+                      c.add(5); <br>
+                      c.add(9); <br>
+                      
+                      // now we can access the private variable in the following way<br>
+                      c.retrieve(); // => The counter is currently at: 14<br>
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
