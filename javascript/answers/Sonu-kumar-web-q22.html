@@ -47,9 +47,21 @@
             <div>
                 <strong>Answer:</strong> 
                 <p>
-                    The JavaScript this keyword refers to the object it belongs to.<br>
+                    The JavaScript <b>this</b> keyword refers to the object it belongs to.<br>
                     This has different values depending on where it is used.
-                    In a method, this refers to the owner object and in a function, this refers to the global object.
+                    In a method, <b>this</b> refers to the owner object and in a function, this refers to the global object.<br>
+                    In an object method, <b>this</b> refers to the "owner" of the method.<br>
+                    In this example, <b>this</b> refers to the person object.<br>
+                    <code>
+                        var person = {
+                            <br>firstName: "Sonu",
+                            <br>lastName : "Kumar",
+                            <br>id       : 3230,
+                            <br>fullName : function() {
+                            <br>return this.firstName + " " + this.lastName;
+                            <br>&nbsp;}
+                            <br>};
+                    </code>
                 </p>
             </div>
         </div>
