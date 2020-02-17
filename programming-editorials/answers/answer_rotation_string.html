@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Rotation String</title>
+</head>
+<body>
+    <code>
+        def is_rotation(str1, str2):
+            # Check if strings are of equal length.
+            if len(str1) != len(str2):
+                return False
+            else:
+                return str2 in (str1+str1)
+    </code>
+</body>
+</html>
