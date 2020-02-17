@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What is the purpose of ‘This’ operator in JavaScript?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What is the purpose of ‘This’ operator in JavaScript?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    What is the purpose of ‘This’ operator in JavaScript?
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    The JavaScript <b>this</b> keyword refers to the object it belongs to.<br>
+                    This has different values depending on where it is used.
+                    In a method, <b>this</b> refers to the owner object and in a function, this refers to the global object.<br>
+                    In an object method, <b>this</b> refers to the "owner" of the method.<br>
+                    In this example, <b>this</b> refers to the person object.<br>
+                    <code>
+                        var person = {
+                            <br>firstName: "Sonu",
+                            <br>lastName : "Kumar",
+                            <br>id       : 3230,
+                            <br>fullName : function() {
+                            <br>return this.firstName + " " + this.lastName;
+                            <br>&nbsp;}
+                            <br>};
+                    </code>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
