@@ -30,7 +30,7 @@
 
                     <a href="../../index.html">Home</a>
                     &gt; <a href="../index.html">JavaScript Questions</a>
-                    &gt; What&nbspis&nbspthe&nbsp‘Strict’&nbspmode&nbspin&nbspJavaScript&nbspand&nbsphow&nbspcan&nbspit&nbspbe&nbspenabled?
+                    &gt; What is the ‘Strict’ mode in JavaScript and how can it be enabled?
 
                 </small>
                
@@ -40,7 +40,7 @@
         <div>
             <div>
                 <h4>
-                    What&nbspis&nbspthe&nbsp‘Strict’&nbspmode&nbspin&nbspJavaScript&nbspand&nbsphow&nbspcan&nbspit&nbspbe&nbspenabled?
+                    What is the ‘Strict’ mode in JavaScript and how can it be enabled?
                 </h4>
             </div>
             <br>
@@ -57,6 +57,21 @@
                 </p>
             </div>
         </div>
+        <br>
+             <code>
+                 <p>Example:</p>
+                 <p>Declared inside a function, it has local scope (only the code inside the function is in strict mode):</p>
+
+                x = 3.14; <br>      // This will not cause an error as variable x is not defined and the code is not in strict mode.<br>
+                myFunction();<br>
+
+                function myFunction() {<br>
+                    "use strict";<br>
+                    y = 3.14;<br>   // This will cause an error beacause variable y is not defined and we are using strict mode <br>
+                }<br>
+             </code>
+             <p>from the above code, you can understand strict mode. </p>
+             
         <hr>
 
         <div>
