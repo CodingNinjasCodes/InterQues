@@ -1,0 +1,102 @@
+<html>
+
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+    </script>
+
+    <title>
+        JavaScript | InterQues | Coding Ninjas
+    </title>
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png" />
+
+    <meta name="description" content="Explain the role of deferred scripts in JavaScript">
+</head>
+
+<body>
+
+    <div>
+        <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+    </div>
+
+    <div>
+        <p>
+            <small>
+
+                <a href="../../index.html">Home</a>
+                &gt; <a href="../index.html">JavaScript Questions</a>
+                &gt; Explain the role of deferred scripts in JavaScript
+
+            </small>
+
+        </p>
+    </div>
+
+
+    <div>
+        <div>
+            <h4>
+                Explain the role of deferred scripts in JavaScript
+            </h4>
+        </div>
+        <div>
+            <strong>Answer:</strong>
+            <p>The defer attribute is a boolean attribute.
+                When present, it specifies that the script is executed when the page has finished parsing.</p>
+
+            <p>As the document parser goes through the page, this is what occurs -</p>
+            <img src="../../assets/images/keshav37a/Normal-Execution.png">
+
+            <p>The defer attribute tells the browser to only execute the script file once the HTML document has been
+                fully parsed.</p>
+
+            <img src="../../assets/images/keshav37a/Defer-Execution.png">
+
+            <p>The file can be downloaded while the HTML document is still parsing. However, even if the file is fully
+                downloaded long before the document is finished parsing, the script is not executed until the parsing is
+                complete.</p>
+
+            <p>By default, the parsing of the HTML code, during page loading, is paused until the script has not stopped
+                executing. It means, if the server is slow or the script is particularly heavy, then the webpage is
+                displayed with a delay. While using Deferred, scripts delays execution of the script till the time HTML
+                parser is running. This reduces the loading time of web pages and they get displayed faster.</p>
+
+            <p>Syntax:<br>
+                &ltscript defer>&lt/script></p>
+
+            <p>Example:<br>
+
+                &ltp>&ltscript> <br>
+                //do stuff (runs first) <br>
+                &lt/script> <br><br>
+                &ltscript defer> <br>
+                //do stuff, but defer it (runs last) <br>
+                &lt/script> <br><br>
+                &ltscript> <br>
+                //do more stuff (runs second) <br>
+                &lt/script>&lt/p> <br>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div>
+        <h5>
+            Similar Questions
+        </h5>
+        <ul>
+
+        </ul>
+    </div>
+
+</body>
+
+</html>
