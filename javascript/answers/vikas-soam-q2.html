@@ -1,0 +1,96 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What will the code below output to the console and why ?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; Between JavaScript and an ASP script, which is faster?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                   Q: What will the code below output to the console and why ?
+                </h4>
+                <code>
+                    console.log(1 +  "2" + "2");<br>
+                    console.log(1 +  +"2" + "2");<br>
+                    console.log(1 +  -"1" + "2");<br>
+                    console.log(+"1" +  "1" + "2"); <br>
+                    console.log( "A" - "B" + "2"); <br>
+                    console.log( "A" - "B" + 2); 
+            </code>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>The above code will output the following to the console:</p>
+                <code>
+                    "122"<br>
+                    "32"<br>
+                    "02"<br>
+                    "112"<br>
+                    "NaN2"<br>
+                    NaN
+                </code>
+                <p>
+                    <b>Here’s why…</b>
+                    The fundamental issue here is that JavaScript (ECMAScript) is a loosely typed language and it performs automatic type conversion on values to accommodate the operation being performed.
+                    Let’s see how this plays out with each of the above examples.
+                    <br>
+                    Example 1: 1 + "2" + "2" Outputs: "122" Explanation: The first operation to be performed in 1 + "2". 
+                    Since one of the operands ("2") is a string, JavaScript assumes it needs to perform string concatenation and therefore converts the type of 1 to "1", 1 + "2" yields "12".
+                    Then, "12" + "2" yields "122".
+                    <br>
+                <b>for more you can visit :- 
+                    https://www.toptal.com/javascript/interview-questions
+                </b>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
