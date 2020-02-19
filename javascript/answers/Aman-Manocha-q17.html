@@ -1,0 +1,79 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What is hoisting in javascript?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What is hoisting in javascript?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    What is hoisting in javascript ?
+                </h4>
+            </div>
+            <div>
+                <strong>Answer:</strong> 
+                <p>In JavaScript before our code is executed, the variable and function declarations are put into memory during the compile phase. And this is known as hoisting.</p>
+                <h4>In case of functions : </h4>
+                <code>
+                    outputName("Aman");<br>
+                    function outputName(name){<br>
+                     &nbsp;&nbsp;console.log("My name is " + name);<br>
+                    }
+                </code>
+                <p>In the above code function is called before it is declared, but it still runs. This is because functions in javascript are hoisted and memory space has already been set aside for them. This allows us to use a function before we declare it in our code. </p>
+                <h4>In case of variables : </h4>
+                <code>
+                    console.log(str);<br>
+                    var str = "string";
+                </code>
+                <p>When we run the above code, the output is undefined and it doesn't give us error because of hoisting. Js engine has already set aside memory space for variable <code>str</code> and set it to undefined which means undeclared. Javascipt only hoists declarations, not the initialisations. Therefore str is not equal to "string", until the line has executed in the execution phase.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>

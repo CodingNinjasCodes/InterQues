@@ -1,0 +1,89 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What is a “closure” in JavaScript?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What is a “closure” in JavaScript?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    What is a “closure” in JavaScript??
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                A closure is an inner function that has access to the variables in the outer (enclosing) function’s scope chain. <br>
+                    The closure has access to variables in three scopes,
+                    specifically: <br>
+                    (1) variable in its own scope. 
+                     (2) variables in the enclosing function’s scope. 
+                      (3) global variables.<br>
+                 
+                      <code>
+                        function OuterFunction() {
+
+                            var outerVariable = 100;
+                        
+                            function InnerFunction() {
+                                alert(outerVariable);
+                            }
+                        
+                            return InnerFunction;
+                        }
+                        var innerFunc = OuterFunction();
+                        
+                        innerFunc(); // 100
+                          </code>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
