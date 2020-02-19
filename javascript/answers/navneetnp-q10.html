@@ -1,0 +1,89 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="How to empty an array in JavaScript?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; How to empty an array in JavaScript?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    How to empty an array in JavaScript?
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <span>There are multiple ways of emptying an array in JavaScript. Four of the most important ones are:</span>
+            <p>
+                <b>By assigning an empty array:</b><br>
+                var array1 = [1, 22, 24, 46];<br>
+                array1 = [];<br>
+            </p>
+            <p>
+                <b>By assigning array length to 0:</b><br>
+                var array1 = [1, 22, 24, 46];<br>
+                array1.length=0;<br>
+            </p>
+            <p>
+                <b>By popping the elements of the array:</b><br>
+                var array1 = [1, 22, 24, 46];<br>
+                while(array1.length > 0) {<br>
+                array1.pop();<br>
+                }<br>
+            </p>
+            <p>
+                <b>By using the splice array function:</b><br>
+                var array1 = [1, 22, 24, 46];<br>
+                array1.splice(0, array1.length)<br>
+            </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
