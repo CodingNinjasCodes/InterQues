@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,7 +38,19 @@
 
         
 <strong>Answer</strong>
+<p>The potential stack overflow can be avoided by modifying the <code>nextListItem</code> function as follows:</p>
+<code>var list = readHugeList();<br>
+<br>
+var nextListItem = function() {<br>
+   &nbsp; var item = list.pop();<br>
+<br>
+    &nbsp;&nbsp;if (item) {<br>
+        &nbsp;&nbsp;&nbsp;// process the list item...<br>
+        &nbsp;&nbsp;&nbsp;setTimeout( nextListItem, 0);<br>
+    &nbsp;&nbsp;}<br>
+};</code><br>
 
+<p>The stack overflow is eliminated because the event loop handles the recursion, not the call stack. When <code>nextListItem</code> runs, if <code>item</code> is not <code>null</code>, the timeout <code>function (nextListItem)</code> is pushed to the event queue and the function exits, thereby leaving the call stack clear. When the event queue runs its timed-out event, the next <code>item</code> is processed and a timer is set to again invoke nextListItem. Accordingly, the method is processed from start to finish without a direct recursive call, so the call stack remains clear, regardless of the number of iterations.</p>
             </li>
 
     </body>
