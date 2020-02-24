@@ -16,7 +16,7 @@
 
         <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
 
-        <meta name="description" content="What are escape characters?">
+        <meta name="description" content="What's the difference between event.preventDefault() and event.stopPropagation() methods?">
     </head>
     <body>
 
@@ -30,7 +30,7 @@
 
                     <a href="../../index.html">Home</a>
                     &gt; <a href="../index.html">JavaScript Questions</a>
-                    &gt; What are escape characters?
+                    &gt; What's the difference between event.preventDefault() and event.stopPropagation() methods?
 
                 </small>
                
@@ -41,20 +41,18 @@
         <div>
             <div>
                 <h4>
-                    What are escape characters?
+                    What's the difference between event.preventDefault() and event.stopPropagation() methods?
                 </h4>
                 
             </div>
             
             <div>
                 <strong>Answer:</strong> 
-                <p>Escape characters (Backslash) is used when working with special characters like single quotes, double quotes, apostrophes and ampersands.</p>
-                <p>Place backslash before the characters to make it display.</p>
-                <p>Example</p>
-                <code>
-                    document.write "I m a "good" boy" <br>
-                    document.write "I m a \"good\" boy"
-                </code>
+                
+                    <p> The <code>event.preventDefault()</code> method prevents the default behavior of an element. If used in a form element it prevents it from submitting. </p>
+                    <p>If used in an anchor element it prevents it from navigating. If used in a contextmenu it prevents it from showing or displaying. </p>
+                    <p>While the <code>event.stopPropagation()</code> method stops the propogation of an event or it stops the event from occurring in the bubbling or capturing phase.</p>
+                
                 
             </div>
         </div>
