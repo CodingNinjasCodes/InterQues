@@ -1,0 +1,92 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What's the difference between Function.prototype.apply and Function.prototype.call?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What's the difference between Function.prototype.apply and Function.prototype.call?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    What's the difference between Function.prototype.apply and Function.prototype.call?
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <span>The only difference between apply and call is how we pass the arguments in the function being called. In apply we pass the arguments as an array and in call we pass the arguments directly in the argument list.</span>
+            <p>
+                <code>
+                    <xmp>
+                        const obj1 = {
+                            result:0
+                           };
+                           
+                           const obj2 = {
+                            result:0
+                           };
+                           
+                           function reduceAdd(){
+                              let result = 0;
+                              for(let i = 0, len = arguments.length; i < len; i++){
+                                result += arguments[i];
+                              }
+                              this.result = result;
+                           }
+                           
+                           reduceAdd.apply(obj1, [1, 2, 3, 4, 5]); // returns 15
+                           reduceAdd.call(obj2, 1, 2, 3, 4, 5); // returns 15
+                    </xmp>
+                </code>
+            </p>
+            
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
