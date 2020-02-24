@@ -1,0 +1,115 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Determine the output of following code on console ?">
+        <style>
+            #my-answer p{
+                text-align: justify;
+                width: 80%;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; Determine the output of following code on console ?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                   Q: Determine the output of following code on console ?
+                </h4>
+                <code>
+                    1. var x = 1;<br>
+                    2. function outer(){<br>
+                    3. &nbsp;&nbsp;var y = 2;<br>
+                    4. &nbsp;&nbsp;x++;<br>
+                    5. &nbsp;&nbsp;function inner(){<br>
+                    6. &nbsp;&nbsp;&nbsp;&nbsp;x++;<br>
+                    7. &nbsp;&nbsp;&nbsp;&nbsp;y++;<br>
+                    8. &nbsp;&nbsp;&nbsp;&nbsp;console.log(x,y);<br>
+                    9. &nbsp;&nbsp;} <br>
+                   10. &nbsp;&nbsp;return inner;<br>
+                   11. } <br>
+                   12. var innerFun = outer(); <br>
+                   13. innerFun(); <br>
+                   14. outer(); <br>
+                   15. innerFun(); <br>
+                </code>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+            
+                <p id="my-answer" >
+                    <p>
+                        <strong>1.</strong> If we take a close look to the code then we will see that after calling outer function at line 12 
+                        we store the function reference of inner() to the innerFun variable via calling the outer() function that is we are  
+                        of JavaScript language which actually moving the scope of inner() function to the global context.
+                    </p>
+                    <p>
+                        <strong>2.</strong> After executing line 12 inner function refernce gets stored in the innerFun variable and var x will 
+                        increased to 2 .
+                    </p>
+                    <p>
+                        <strong>3.</strong> At line 13 calling inner function via innerFun variable it actually increase the var x and var y to 
+                        3,3 respectively. It will create a execution stack where now x=3,y=3 will be stored.
+                    </p>
+                    <p>
+                        <strong>4.</strong> At line 14 we again call the outer function which will create the <strong>separate exection stack</strong> which is
+                        different from created in line 12. Here in current execution stack x=4,y=2.
+                    </p>
+                    <p >
+                        <strong>5.</strong> At line again we are calling inner function via previous execution stack where x=3,y=3
+                        but due to again calling outer function at line 14 x=4 due to its global scope.Till now x=4,y=3 Now if we again call inner() at line 
+                        15 then x=5, y=4.
+                    </p>
+                    <p>
+                        <div><strong>6.</strong> Output: 3 3</div>
+                        <div style="margin-left: 68px;">5 4</div>
+                    </p>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+        </div>
+        
+    </body>
+</html>

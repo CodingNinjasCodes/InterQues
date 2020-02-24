@@ -1,0 +1,88 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What is the Strict mode in JavaScript and how can it be enabled?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What is the ‘Strict’ mode in JavaScript and how can it be enabled?
+
+                </small>
+               
+            </p>
+        </div>
+
+        <div>
+            <div>
+                <h4>
+                    What is the ‘Strict’ mode in JavaScript and how can it be enabled?
+                </h4>
+            </div>
+            
+            <br>
+            
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Strict mode is a way to introduce better error-checking into your code.
+                    <ul>
+                        <li>When you use strict mode, you cannot use implicitly declared variables, or assign a value to a read-only property, or add a property to an object that is not extensible.</li>
+                        <li>You can enable strict mode by adding “use strict” at the beginning of a file, a program, or a function.</li>
+                    </ul>
+                </p>
+                <br>
+             <code>
+                 <p>Example:</p>
+                 <p>Declared inside a function, it has local scope (only the code inside the function is in strict mode):</p>
+
+                x = 3.14; <br>      // This will not cause an error as variable x is not defined and the code is not in strict mode.<br>
+                myFunction();<br>
+
+                function myFunction() {<br>
+                    "use strict";<br>
+                    y = 3.14;<br>   // This will cause an error beacause variable y is not defined and we are using strict mode <br>
+                }<br>
+             </code>
+             <p>from the above code, you can understand strict mode. </p>
+                        
+            </div>
+        </div>
+             
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
