@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What will be the output of the following code:">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What will be the output of the following code:
+
+                </small>
+            
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    What will be the output of the following code:
+                </h4>
+                <xmp>
+                    for (var i = 0; i < 5; i++) {
+                        setTimeout(function() { console.log(i); }, i * 1000 );
+                    }
+                </xmp>
+                <h4>
+                    Explain your answer. How could the use of closures help here?
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    The code  will not display the values 0, 1, 2, 3, and 4 as might be expected; 
+                    rather, it will display 5, 5, 5, 5, and 5.
+                    The reason for this is that each function executed within the loop will be executed after the 
+                    entire loop has completed and all will therefore reference the last value stored in i, 
+                    which was 5.<br>
+                    <b>Closures</b> can be used to prevent this problem by creating a unique scope for each iteration,
+                     storing each unique value of the variable within its scope, as follows:
+                    <xmp>
+                        for (var i = 0; i < 5; i++) {
+                            (function(x) {
+                                setTimeout(function() { console.log(x); }, x * 1000 );
+                            })(i);
+                        }
+                    </xmp>
+                    This will produce the presumably desired result of logging 0, 1, 2, 3, and 4 to the console.<br>
+                    you can simply use let instead of var in the original code:
+                    <xmp>
+                        for (let i = 0; i < 5; i++) {
+                            setTimeout(function() { console.log(i); }, i * 1000 );
+                        }
+                    </xmp>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>

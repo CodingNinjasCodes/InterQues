@@ -1,0 +1,91 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            Data Structure | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="increasing subsequence of size 3">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt; Given an Array of Integers find the maximum product of increasing subsequence of size 3 . If a valid subsequence cannot be formed print -1
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4>Given an Array of Integers find the maximum product of increasing subsequence of size 3 . If a valid subsequence cannot be formed print -1</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet for :<strong>Given an Array of Integers find the maximum product of increasing subsequence of size 3 . If a valid subsequence cannot be formed print -1</strong>
+                </p>
+
+                <code>
+                    &nbsp;&nbsp;static int maxProduct(int[]a){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;int n=a.length;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;int maxProduct=-1;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;int[]rightMax=new int[n];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;TreeSet<Integer>set=new TreeSet&lt;&gt;();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;int maxRightElement=-1;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;for(int i=n-1;i>-1;i--){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rightMax[i]=maxRightElement&lt;a[i]?-1:maxRightElement;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxRightElement&#61;Math.max(maxRightElement,a[i]);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;for(int i&#61;0;i&lt;n;i++){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(set.lower(a[i])&#61;&#61;null||rightMax[i]&#61;&#61;-1)<br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{   
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set.add(a[i]);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxProduct&#61;Math.max(maxProduct,a[i]*set.lower(a[i])*rightMax[i]);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set.add(a[i]);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return maxProduct;<br>
+                            &nbsp;&nbsp;}<br>
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
