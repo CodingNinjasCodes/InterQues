@@ -1,0 +1,98 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Explain the difference between escape() and unescape() functions">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; Explain the difference between escape() and unescape() functions?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h3>
+                    Q: Explain the difference between escape() and unescape() functions?
+                </h3>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>The escape() function allows for converting a string into a coded form in JavaScript. It is used for securely transferring information from one system to another over some network. For instance, consider the following code snippet:</p>
+
+                
+<pre>
+    <code>
+        This%20string%20is%20encoded%21
+    </code>                    
+</pre>
+                <p>
+                   The output of the aforementioned code snipped will be something like this:
+                </p>
+<pre>
+    <code>
+        This%3F%20string%20is%20encoded%21
+    </code>
+</pre>
+                
+                <p>The unescape() function does the exact opposite of the escape() function i.e. it decodes a coded string into the original string. Therefore, the following code snippet:</p>
+<pre>
+    <code>
+        This? string is encoded!
+    </code>
+</pre>
+                
+                <p>Will yield the following output:</p>
+             <pre>
+    <code>
+        This string is encoded!
+    </code>
+</pre>
+
+            
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>

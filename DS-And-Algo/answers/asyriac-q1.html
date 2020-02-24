@@ -1,0 +1,83 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+
+        <title>
+            Data Structures and Algorithms | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Given two binary trees, write a function to check if they are the same or not.">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt; Given two binary trees, write a function to check if they are the same or not.
+                </small>
+            </p>
+        </div>
+
+        <div>
+            <div>
+                <h4>
+                    <h4>Given two binary trees, write a function to check if they are the same or not.</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong>
+                <p>
+                    Here's a code snippet to check if two binary trees are same or not.
+                </p>
+
+                <code>
+                    public boolean isSameTree(TreeNode p, TreeNode q) {<br><br>
+                       &nbsp;&nbsp;if(p == null && q == null)<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    return null;<br>
+                       &nbsp;&nbsp;if(p!=null && q == null)<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    return false;<br>
+                       &nbsp;&nbsp;if(q!=null && p == null)<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    return false;<br>
+                       &nbsp;&nbsp;if(p.val != q.val)<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    return false;<br>
+                       &nbsp;&nbsp;boolean leftTree = isSameTree(p.left,q.left);<br>
+                       &nbsp;&nbsp;boolean rightTree = isSameTree(p.right,q.right);<br>
+                       &nbsp;&nbsp;if(leftTree == true && rightTree == true)<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;    return true;<br>
+                       &nbsp;&nbsp;return false;<br>
+                    }
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+
+            </ul>
+        </div>
+
+    </body>
+</html>
