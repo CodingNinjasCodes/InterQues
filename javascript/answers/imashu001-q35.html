@@ -56,7 +56,25 @@
 
                     onDocumentReady loads the code just after the DOM is loaded. This allows early manipulation of the code.
                 </p>
-               <code></code>
+               <code>
+                   <p>Example</p>
+                       <body onload="myFunction()">
+                           <h1>Hello World!</h1>
+                           <script>
+                               function myFunction() {
+                                   alert("Page is loaded");
+                               }
+                               //The above code will alert page is loaded once page is rady to display .
+                               
+                               
+                                $( document ).ready(function() {
+                                    console.log( "document loaded" );
+                                });
+                               
+                               //The above code will print " Document Loaded " in the console just after DOm is Loaded .
+                           </script>
+                       </body>
+                </code>
 
             </div>
         </div>
