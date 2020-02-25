@@ -1,0 +1,122 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Write a program to know the house number of the houses that are paying more rent than both the neighbors.">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt; Write a program to know the house number of the houses that are paying more rent than both the neighbors.
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4> Write a program to know the house number of the houses that are paying more rent than both the neighbors.</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet to find high paying rent houses.
+                </p>
+
+                <code>
+                    import java.util.*; <br>
+	
+
+public class Peak {   <br>
+	
+	
+	  public static void main(String args[])  {   <br>
+	    
+	    
+	    Scanner sc = new Scanner(System.in);   <br>
+	
+	
+	int N= sc.nextInt();   <br>
+	int arr[]= new int[N]; <br>
+	for(int i=0;i<N;i++) {      <br>
+	arr[i] = sc.nextInt();     <br>
+	}                          <br>
+	boolean peak= false;       <br>
+	if(arr[0]>arr[1])  {           <br>
+	System.out.print(0+ " ");         <br>
+	peak=true;                    <br>
+	}                       <br>
+	for(int i=1;i<N-1;i++) {         <br>
+	if(arr[i]> arr[i-1] && arr[i] > arr[i+1]) {  <br>
+	 System.out.print(i+ " ");            <br>
+	peak= true;             <br>
+	 }                 <br>
+	}             <br>
+	if(arr[N-1]>arr[N-2])  {  <br>
+	System.out.print(N-1);<br>
+	System.out.println(" ");<br>
+	peak=true;<br>
+	}<br>
+	if(peak==false)<br>
+	System.out.println("-1");<br>
+	} <br>
+	} <br>
+	
+                
+                <br>
+
+                </code>
+                <h5> Sample test case explanation </h5>
+
+               
+
+                N=5  <br>
+                
+                Array = [4,3,5,2,1] <br>
+                4 is greater than 3 so print 0(index number of the house paying rent=4) <br>
+                3 is not greater than its neighbor 4 and 5 so skip it <br>
+                5 is greater than both 3 and 2 so print 2(house number of the house paying rent=5) <br>
+                2 is greater than 1 but smaller than 5 so skip it <br>
+                1 is smaller than 2 so skip it. <br>
+                Final answer = 0 2 <br>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
