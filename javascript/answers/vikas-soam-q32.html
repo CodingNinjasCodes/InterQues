@@ -1,5 +1,7 @@
 <html>
     <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,10 +16,9 @@
 
         <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
 
-        <meta name="description" content="What is the purpose of ‘This’ operator in JavaScript?">
+        <meta name="description" content="What is Callback?">
     </head>
     <body>
-
         <div>
             <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
         </div>
@@ -28,10 +29,10 @@
 
                     <a href="../../index.html">Home</a>
                     &gt; <a href="../index.html">JavaScript Questions</a>
-                    &gt; What is the purpose of ‘This’ operator in JavaScript?
+                    &gt;What is Callback?
 
                 </small>
-            
+               
             </p>
         </div>
 
@@ -39,29 +40,20 @@
         <div>
             <div>
                 <h4>
-                    What is the purpose of ‘This’ operator in JavaScript?
+                   Q:What is Callback?
                 </h4>
+                
             </div>
             <br>
             <br>
             <div>
                 <strong>Answer:</strong> 
+            
                 <p>
-                    The JavaScript <b>this</b> keyword refers to the object it belongs to.<br>
-                    This has different values depending on where it is used.
-                    In a method, <b>this</b> refers to the owner object and in a function, this refers to the global object.<br>
-                    In an object method, <b>this</b> refers to the "owner" of the method.<br>
-                    In this example, <b>this</b> refers to the person object.<br>
-                    <xmp>
-                        var person = {
-                            firstName: "Sonu",
-                            lastName : "Kumar",
-                            id       : 3230,
-                            fullName : function() {
-                            return this.firstName + " " + this.lastName;
-                                }
-                            };
-                    </xmp>
+                    A callback is a plain JavaScript function passed to some method as an argument or option. 
+                    It is a function that is to be executed after another function has finished executing, hence the name ‘call back‘. 
+                    In JavaScript, functions are objects. 
+                    Because of this, functions can take functions as arguments, and can be returned by other functions.    
                 </p>
             </div>
         </div>
