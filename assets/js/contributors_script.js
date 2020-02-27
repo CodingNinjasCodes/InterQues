@@ -6,6 +6,7 @@
     })
     .then(function(data){
         // console.log(data);
+        // console.log(data.length);
 
         var body = document.getElementsByTagName("body")[0];
         var tbl = document.createElement("table");
@@ -21,7 +22,7 @@
             count++;
 
             if(count == 7){
-                console.log(count);
+                // console.log(count);
                 count = 1;
                 tblBody.appendChild(row);
                 var row = document.createElement("tr");
