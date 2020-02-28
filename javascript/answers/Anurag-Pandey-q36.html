@@ -1,0 +1,79 @@
+
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="what is event loop in javascript?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What is eventloop in javascript?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                What is eventloop in javascript?
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong>
+                <p> event loop handles the execution of multiple chunks of your program over time, each time invoking the JS Engine.</p>
+                <p>
+                    The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, 
+                    it will take the first event from the queue and will push it to the Call Stack, which effectively runs it. 
+                    Such an iteration is called a tick in the Event Loop. Each event is just a function callback<p>
+                </p>
+                <p>  The loop gives priority to the call stack, and it first processes everything it finds in the call stack,
+                    and once there’s nothing in there, it goes to pick up things in the message queue.</p>
+   
+
+                <strong>further read:</strong>
+                <a href="https://flaviocopes.com/javascript-event-loop/">eventloop</a>
+
+
+              
+               </div>   
+          <hr>
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>

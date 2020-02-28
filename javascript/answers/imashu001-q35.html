@@ -1,0 +1,94 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Explain window.onload and onDocumentReady?
+        ">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; Explain window.onload and onDocumentReady?
+
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    <h4>Explain window.onload and onDocumentReady?
+                    </h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    The onload function is not run until all the information on the page is loaded. This leads to a substantial delay before any code is executed.
+
+                    onDocumentReady loads the code just after the DOM is loaded. This allows early manipulation of the code.
+                </p>
+               <code>
+                   <p>Example</p>
+                       <body onload="myFunction()">
+                           <h1>Hello World!</h1>
+                           <script>
+                               function myFunction() {
+                                   alert("Page is loaded");
+                               }
+                               //The above code will alert page is loaded once page is rady to display .
+                               
+                               
+                                $( document ).ready(function() {
+                                    console.log( "document loaded" );
+                                });
+                               
+                               //The above code will print " Document Loaded " in the console just after DOm is Loaded .
+                           </script>
+                       </body>
+                </code>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
