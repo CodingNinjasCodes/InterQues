@@ -1,0 +1,130 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What are the different ways to define a variable in JavaScript? And when to pick which one to use?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What are the different ways to define a variable in JavaScript? And when to pick which one to use?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    What are the different ways to define a variable in JavaScript? And when to pick which one to use?
+                </h4>
+            </div>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    There are three possible ways of defining a variable in JavaScript(ES6/2015):
+                    <ol>
+                        <li>
+                            <p>
+                                <strong>Var</strong> – The var keyword is used to declare a variable and, optionally, initialize the value of that variable globally. <br>
+                                Example: <br>
+                                <code>
+<pre>
+    var userName = "rajat";
+
+    // username can be used here
+
+    function myFunction() {
+        // userName can also be used here
+    }
+</pre>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>Let</strong> – Introduced in ES2015. The let keyword is used to define a variable that will be used only in the block it is defined in. Usually provides a hint that the variable may have been reassigned, i.e. a counter in a loop, or a value swap in an algo. <br>
+                                The let provide <i>Block{} Scope</i> variables. Hence, it can't be accessed outside the scope. Example:
+                                <br>
+                                <code>
+<pre>
+    {
+        let a = 2;
+    }
+    // a can NOT be used here
+    
+</pre>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>Const</strong> – Introduced in ES2015. Declaring a variable with const is similar to that of let when it comes to Block Scope, i.e not accessible outside the block variables. The const variable must be assigned a value when they are declared. For example: <br>
+                                Incorrect Way <br>
+                                <code>
+<pre>
+    const PI;
+    PI = 3.14159265359;
+</pre>
+                                </code>
+                                <br>
+                                Correct Way <br>
+                                <code>
+<pre>
+    const PI = 3.14159265359;
+</pre>
+                                </code>
+                                <br>
+                                The const variables cannot be reassigned <br>
+                                <code>
+<pre>
+    const PI = 3.141592653589793;
+    PI = 3.14; &ensp;// This will give an error
+    PI = PI + 10; &ensp;// This will also give an error
+</pre>
+                                </code>
+                            </p>
+                        </li>
+                    </ol>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
