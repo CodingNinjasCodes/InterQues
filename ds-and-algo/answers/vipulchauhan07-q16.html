@@ -1,0 +1,94 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+           Data Structures And Algorithms | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Given a linked list, swap every two adjacent nodes and return its head.
+        You may not modify the values in the list's nodes, only nodes itself may be changed.">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt;Given a linked list, swap every two adjacent nodes and return its head.<br>
+                    You may not modify the values in the list's nodes, only nodes itself may be changed.
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    Given a linked list, swap every two adjacent nodes and return its head.<br>
+                    You may not modify the values in the list's nodes, only nodes itself may be changed.<br>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    This problem can be solve effectively by using recursion. 
+                </p>
+
+                <code style="font-size: 15px; font-family: monospace;">
+                    /* <br>
+                     * Definition for singly-linked list.<br>
+                     * public class Node { <br>
+                     *     int <var>data</var>;<br>
+                     *     Node <var>next</var>; <br>
+                     *     Node(<var>int x</var>) {<var>data = x;</var> } <br>
+                     * } <br>
+                     */ <br>
+                    class Solution { <br>
+                        &nbsp &nbsp public Node swap(Node head) { <br>
+                        &nbsp &nbsp &nbsp &nbsp    if(head == null || head.next == null) <br>
+                        &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp        return head; <br>
+                        &nbsp &nbsp &nbsp &nbsp  Node remainingListHead = head.next.next; <br>
+                        &nbsp &nbsp &nbsp &nbsp  Node reverseHead = head.next; <br>
+                        &nbsp &nbsp &nbsp &nbsp    head.next.next = head; <br>
+                        &nbsp &nbsp &nbsp &nbsp  head.next = swap(remainingListHead); <br>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    return reverseHead; <br>
+                            
+                        &nbsp &nbsp &nbsp &nbsp    } <br> <br>
+                        &nbsp &nbsp public Node swapPairs(Node head) { <br>
+                        &nbsp &nbsp &nbsp &nbsp return swap(head); <br>
+                        &nbsp &nbsp &nbsp &nbsp  } <br>
+                    } <br>
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
