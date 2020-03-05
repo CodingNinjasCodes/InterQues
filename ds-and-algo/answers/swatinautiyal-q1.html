@@ -1,0 +1,100 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            Data Structure | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="insertion at specific position in SLL">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt; insertion at specific position in SLL
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4>insertion at specific position in SLL</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet for :<strong>insertion at specific position in SLL</strong>
+                </p>
+
+                <code>
+                    &nbsp;&nbsp;#include<stdio.h>{<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;struct node{<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;  int info;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;struct node*link;<br>
+                        }<br>
+                
+                        &nbsp;&nbsp;&nbsp;&nbsp;struct node *START=NULL;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;struct node*createNode()<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; struct node*n;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; n=(struct node *)malloc(size of(struct node));<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;   return(n);<br>
+                        }   
+                             <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;void insert()<br>
+                        {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;struct node*temp<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp=createNode();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enter data and location<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;new1->info=data<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;if (location==1)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new1-> next=start<br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start=new1<br>   
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;previous=start<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count=1<br>
+                
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(count<=location-1 && previous->next!=NULL<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;previous=previous->next<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;count++<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;new1-> next=previous-> next<br>
+                            &nbsp;&nbsp;previous->next=new1 }<br>
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
