@@ -1,0 +1,148 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            Data Structure | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Define Externalizable Interface and itspurpose with examples.">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt;Define Externalizable Interface and itspurpose with examples.
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4>Define Externalizable Interface and itspurpose with examples.</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet for :<strong>Define Externalizable Interface and itspurpose with examples.</strong>
+                </p>
+
+                <code>
+                    <p>Externalization serves the purpose of custom Serialization, where we can decide what to store in stream.
+
+                        Externalizable interface present in java.io, is used for Externalization which extends Serializable interface. It consist of two methods which we have to override to write/read object into/from stream which are-
+                        
+                        // to read object from stream
+                        void readExternal(ObjectInput in) 
+                        
+                        // to write object into stream
+                        void writeExternal(ObjectOutput out) </p>
+                        &nbsp;&nbsp;import java.io.*;<br>
+                        &nbsp;&nbsp;class Car implements Externalizable { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    static int age; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    String name; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    int year; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    public Car() <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;{ <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    System.out.println("Default Constructor called"); <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                          
+                            &nbsp;&nbsp;&nbsp;&nbsp;Car(String n, int y) <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;{ <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    this.name = n; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    this.year = y; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;    age = 10; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;public void writeExternal(ObjectOutput out)  <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;                          throws IOException <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;{ <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    out.writeObject(name); <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    out.writeInt(age); <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;    out.writeInt(year); <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;public void readExternal(ObjectInput in)  <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;   throws IOException, ClassNotFoundException <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;{ <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;    name = (String)in.readObject(); <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;    year = in.readInt(); <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;    age = in.readInt(); <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;public String toString() <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;{ <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;    return ("Name: " + name + "\n" +  <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;       "Year: " + year + "\n" +  <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;       "Age: " + age); <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;    } <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                          
+                                &nbsp;&nbsp;&nbsp;&nbsp;public class ExternExample { <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;{ <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Car car = new Car("Shubham", 1995); <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;    Car newcar = null; <br>
+                                 
+                          
+                                        &nbsp;&nbsp;&nbsp;&nbsp; // Serialize the car <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;try { <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;FileOutputStream fo = new FileOutputStream("gfg.txt"); <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;ObjectOutputStream so = new ObjectOutputStream(fo); <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;so.writeObject(car); <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;so.flush(); <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;catch (Exception e) { <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;    System.out.println(e); <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                          
+                                                &nbsp;&nbsp;&nbsp;&nbsp;// Deserializa the car <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;try { <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;    FileInputStream fi = new FileInputStream("gfg.txt"); <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;    ObjectInputStream si = new ObjectInputStream(fi); <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;    newcar = (Car)si.readObject(); <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;catch (Exception e) { <br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;    System.out.println(e); <br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                          
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("The original car is:\n" + car); <br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("The new car is:\n" + newcar); <br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                    
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
