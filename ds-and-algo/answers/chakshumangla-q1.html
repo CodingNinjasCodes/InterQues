@@ -1,0 +1,76 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            Data Structure | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content=" What is Yield Keyword in Python?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt;  What is Yield Keyword in Python?
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4> What is Yield Keyword in Python?</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet for :<strong> What is Yield Keyword in Python?</strong>
+                </p>
+                <p> The yield keyword in Python can turn any function into a generator. Yields work like a standard return keyword.
+
+                    But it’ll always return a generator object. Also, a function can have multiple calls to the yield keyword.</p>
+
+                <code>
+                    &nbsp;&nbsp;def testgen(index):;{<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;weekdays = ['sun','mon','tue','wed','thu','fri','sat'];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;yield weekdays[index];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;yield weekdays[index+1];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;day = testgen(0);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print next(day), next(day);<br>
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
