@@ -1,0 +1,81 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            Data Structure | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="What is memory leak?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt; What is memory leak?
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4> What is Memory leak?</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet for :<strong>What is memory leak?</strong>
+                </p>
+                <p> 
+                        Memory leak occurs when programmers create a memory in heap and forget to delete it.
+Memory leaks are particularly serious issues for programs like daemons and servers which by definition never terminate.
+                </p>
+
+                <code>
+                    /* Function with memory leak */<br>
+                   #include&#12296;stdlib.h> <br>
+                       void f() <br>
+                       {
+                           int*ptr= (int*)malloc(sizeof(int));<br>
+
+                           /* do some work */<br>
+                           return; /* Return without freeing ptr*/ <br>
+                       }
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
