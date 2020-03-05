@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-157837769-1");
+    </script>
+
+    <title>
+      HTML | InterQues | Coding Ninjas
+    </title>
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png" />
+
+    <meta name="description" content="add the given digit to a number stored in a linked list?" />
+  </head>
+  <body>
+    <div>
+      <img src="../../assets/CN_logo.png" height="72px" alt="Coding Ninjas Logo" />
+    </div>
+
+    <div>
+      <p>
+        <small>
+          <a href="../../index.html">Home</a>
+          &gt; <a href="../index.html">HTML Questions</a>
+          &gt; What are empty elements?
+        </small>
+      </p>
+    </div>
+
+    <div>
+      <div>
+        <h4>
+          <h4>add the given digit to a number stored in a linked list</h4>
+        </h4>
+      </div>
+      <br />
+      <br />
+      <div>
+        <strong>Answer:</strong>
+        <p>add the given digit to a number stored in a linked list? <strong><br>
+ <code>
+    class node <br>
+    {<br>
+        &nbsp;int key; <br>
+        &nbsp;node next; <br>
+     node(int n) <br>
+        { <br>
+            &nbsp; key = n; <br>
+            &nbsp;next = null; <br>
+        } <br>
+    
+    class LinkedList <br>
+    { <br>
+       &nbsp; static node head; <br>
+       &nbsp;public LinkedList() <br>
+        { <br>
+            &nbsp; head = null; <br>
+        } <br>
+        void insert(node n) <br>
+        {<br>
+            &nbsp; if (head == null) <br>
+            &nbsp; head = n; <br>
+            else<br>
+            { <br>
+                &nbsp; n.next = head; <br>
+                &nbsp;head = n; <br>
+            } <br>
+        } <br>
+        void printList() <br>
+        { <br>
+            &nbsp; node ptr = head;<br> 
+            &nbsp; while (ptr != null) <br>
+            { <br>
+                &nbsp;System.out.print(ptr.key + "->"); <br>
+                &nbsp;ptr = ptr.next; <br>
+            } <br>
+            System.out.print("null" + "\n"); <br>
+        } <br>
+        void addDigit(int n) <br>
+        { <br>
+            &nbsp;node lastNode = null; <br>
+            &nbsp; node curr = head; <br>
+            while (curr.next != null)<br>
+            {<br>
+                &nbsp;if (curr.key < 9) <br>
+                &nbsp;lastNode = curr; <br>
+                &nbsp;curr = curr.next; <br>
+            } <br>
+            curr.key = curr.key + n; <br>
+            if (curr.key > 9) <br>
+            { <br>
+                &nbsp;curr.key = curr.key % 10; <br>
+                if (lastNode == null)  <br> 
+                { <br>
+                    &nbsp; insert(new node(1)); <br>
+                    &nbsp; lastNode = head.next; <br>
+                } <br>
+        
+                while (lastNode != curr) <br>
+                { <br>
+                    &nbsp; lastNode.key = (lastNode.key + 1) % 10; <br>
+                    &nbsp; lastNode = lastNode.next; <br>
+                } <br>
+            } <br>
+        } <br>
+        public static void main(String[] args) <br>
+        { <br>
+            &nbsp; LinkedList l1 = new LinkedList(); <br>
+            &nbsp; l1.insert(new node(9)); <br>
+            &nbsp; l1.insert(new node(9)); <br>
+            &nbsp;l1.insert(new node(1)); <br>
+            &nbsp;l1.printList(); <br>
+            &nbsp;l1.addDigit(5); <br>
+            &nbsp;l1.printList(); <br>
+        } 
+    
+</code>    </strong> &lt;br&gt;, &lt;hr&gt;</p>
+      </div>
+    </div>
+
+    <hr />
+    
+
+    <div>
+      <h5>
+        Similar Questions
+      </h5>
+      <ul></ul>
+    </div>
+  </body>
+</html>
