@@ -42,49 +42,51 @@
         <div>
             <div>
                 <h4>search in a row wise and column wise sorted matrix?</h4>
-            </div>
+           <br> </div>
             <div>
+                <code>
                 <strong>Answer:</strong> 
                 class GFG { 
   
-                    /* Searches the element x in mat[][]. If the  
+                    /* Searches the element x in mat[][]<br>. If the  
                 element is found, then prints its position  
                 and returns true, otherwise prints "not found" 
-                and returns false */
+                and returns false */<br>
                     private static void search(int[][] mat, int n, int x) 
-                    { 
+                  <br>  { 
                   
                         int i = 0, j = n - 1; // set indexes for top right 
-                        // element 
+                        // element <br>
                   
-                        while (i < n && j >= 0) { 
-                            if (mat[i][j] == x) { 
+                        while (i < n && j >= 0)<br> { 
+                            if (mat[i][j] == x) <br>{ 
                                 System.out.print("n Found at " + i + " " + j); 
-                                return; 
+                                return; <br>
                             } 
-                            if (mat[i][j] > x) 
-                                j--; 
-                            else // if mat[i][j] < x 
-                                i++; 
+                            if (mat[i][j] > x) <br>
+                              &nbsp;  j--; <br>
+                            else // if mat[i][j] < x <br>
+                            &nbsp;    i++; <br>
                         } 
                   
-                        System.out.print("n Element not found"); 
-                        return; // if ( i==n || j== -1 ) 
-                    } 
-                    // driver program to test above function 
-                    public static void main(String[] args) 
-                    { 
-                        int mat[][] = { { 5, 10, 15, 20 }, 
-                                        { 89, 25, 35, 40 }, 
-                                        { 34, 20, 46, 45 }, 
-                                        { 38, 32, 39, 50 } }; 
-                  
-                        search(mat, 4, 45); 
-                    } 
-                } 
-            </div>
-        </div>
+                        &nbsp;   System.out.print("n Element not found"); <br>
 
+                        return;<br> // if ( i==n || j== -1 ) 
+                    } <br>
+                    // driver program to test above function 
+                   <br> public static void main(String[] args)<br> 
+                   &nbsp;   { 
+                        int mat[][] = { { 5, 10, 15, 20 },<br> 
+                                        { 6, 25, 35, 40 },<br>
+                                        { 15, 20, 40, 45 }, <br>
+                                        { 25, 32, 39, 50 } }; <br>
+                  
+                        search(mat, 4, 45); <br>
+                    } <br>
+                } 
+            </div><br>
+        </div><br>
+    </code>
         <hr>
 
         <div>
