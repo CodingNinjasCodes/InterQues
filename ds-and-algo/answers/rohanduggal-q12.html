@@ -1,0 +1,191 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+           Data Structures And Algorithms | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="find the largest bst subtree in a given binary tree">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt;find the largest bst subtree in a given binary tree
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    find the largest bst subtree in a given binary tree
+                </h4>
+                <p>
+             
+                </p>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                   
+
+                    class Node><br> { <br>
+                    
+                        <nbsp> <nbsp> int data; <br> 
+                            <nbsp><nbsp>Node left, right; <br> 
+                    
+                        Node(int d)<br> { 
+                             data = d; <br> 
+                            left = right = null; <br> 
+                        }  <br>
+                    }  <br>
+                    
+                    class Value<br> {  <br>
+                    
+                         int max_size = 0; <br> 
+                         boolean is_bst = false; <br> 
+                         int min = Integer.MAX_VALUE; <br> 
+                         int max = Integer.MIN_VALUE; <br> 
+                    
+                    }  <br>
+                    
+                    class BinaryTree { <br> 
+                    
+                         static Node root; <br> 
+                         Value val = new Value();  <br>
+                    
+                       
+                        int largestBST(Node node) {  <br>
+                    
+                             largestBSTUtil(node, val, val, val, val); <br> 
+                    
+                             return val.max_size; <br> 
+                        } <br> 
+                    
+                   
+                        int largestBSTUtil(Node node, Value min_ref, Value max_ref, <br> 
+                                Value max_size_ref, Value is_bst_ref) {  <br>
+                    
+                            
+                            if (node == null) {  <br>
+                                is_bst_ref.is_bst = true; <br> 
+                                return 0;  <br>
+                            }  <br>
+                    
+                            int min = Integer.MAX_VALUE; <br> 
+                    
+                            boolean left_flag = false;  <br>
+                    
+                            boolean right_flag = false;  <br>
+                    
+                            int ls, rs; <br>
+                    
+                            a) Get the maximum value in left subtree (Stored in *max_ref)  <br>
+                            b) Check whether Left Subtree is BST or not (Stored in *is_bst_ref) <br> 
+                            c) Get the size of maximum size BST in left subtree (updates *max_size)  <br>
+                            max_ref.max = Integer.MIN_VALUE;  <br>
+                            ls = largestBSTUtil(node.left, min_ref, max_ref, max_size_ref, is_bst_ref); <br> 
+                            if (is_bst_ref.is_bst == true && node.data > max_ref.max) {  <br>
+                                left_flag = true;  <br>
+                            }  <br>
+                    
+                     
+                            min = min_ref.min; <br> 
+                    
+                           
+                            min_ref.min = Integer.MAX_VALUE;  <br>
+                            rs = largestBSTUtil(node.right, min_ref, max_ref, max_size_ref, is_bst_ref); <br> 
+                            if (is_bst_ref.is_bst == true && node.data < min_ref.min) {  <br>
+                                right_flag = true;  <br>
+                            }  <br>
+                    
+                            
+                            if (min < min_ref.min)  <br>{ 
+                                min_ref.min = min;  <br>
+                            }  <br>
+                            if (node.data < min_ref.min)  <br> 
+                            {  <br>
+                                min_ref.min = node.data; <br> 
+                            }  <br>
+                            if (node.data > max_ref.max) {  <br>
+                                max_ref.max = node.data;  <br>
+                            }  <br>
+                    
+                           
+                            if (left_flag && right_flag) { <br> 
+                                if (ls + rs + 1 > max_size_ref.max_size){  <br> 
+                                    max_size_ref.max_size = ls + rs + 1;  <br>
+                                }  <br>
+                                return ls + rs + 1; <br> 
+                            } <br>else<br> {  <br>
+                               
+                                is_bst_ref.is_bst = false; <br> 
+                                return 0;  <br>
+                            }  <br>
+                        }  <br>
+                    
+                        public static void main(String[] args) {  <br>
+                         
+                            BinaryTree tree = new BinaryTree();  <br>
+                            tree.root = new Node(52);  <br>
+                            tree.root.left = new Node(12);  <br>
+                            tree.root.right = new Node(63);  <br>
+                            tree.root.left.left = new Node(4);  <br>
+                            tree.root.left.right = new Node(21);  <br>
+                            tree.root.right.left = new Node(54);  <br>
+                            tree.root.right.left.left = new Node(46);  <br>
+                            tree.root.right.right = new Node(71);  <br>
+                            tree.root.right.right.left = new Node(62);  <br>
+                            tree.root.right.right.right = new Node(84);  <br>
+                            
+                         
+                            System.out.println("Size of largest BST is " + tree.largestBST(root)); <br> 
+                        }  <br>
+                    }  <br>
+                    
+                    
+                    
+                </p>
+                <strong>Code:</strong> 
+     
+
+                <strong>Output:</strong>
+<pre>Output=3</pre>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
