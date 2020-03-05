@@ -1,0 +1,109 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="To find the missing elements from the existing array.">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt;To find the missing elements from the existing array. 
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4>To find the missing elements from the existing array</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet for finding missing elements from existing array.
+                </p>
+
+                <code>
+                    #include<&nbsp;stdio.h&nbsp;> <br>
+#include<&nbsp;conio.h&nbsp;><br>
+void main()<br>
+{ <br>&nbsp;int a[50],&nbsp;c[50],&nbsp;d[50],&nbsp; max=0,&nbsp;min=0,&nbsp;n;<br>
+    &nbsp;printf("enter the size of array\n");
+    <br>&nbsp;scanf("%d",&n);
+    <br>&nbsp;printf("enter the elements\n");
+    <br>&nbsp;for(int i=0;i<&nbsp;n;i++)
+    <br>&nbsp;scanf("%d",&a[i]);
+   
+    <br>&nbsp;for(int i=0;i<&nbsp;n;i++)<br>
+    {
+      <br>&nbsp;  c[i]=a[i];
+   <br>}
+    <br>&nbsp;     min=a[0];
+      <br>&nbsp;  max=a[0];
+    
+   <br>&nbsp; for(int i=0;i<&nbsp;n;i++)
+    <br>{<br> 
+        if(a[i]>max)
+        <br>&nbsp;max=a[i];
+        <br>else if(a[i]<&nbsp;min)
+       <br>&nbsp; min=a[i];
+        
+    <br>}
+    <br>for(int j=min;j<=max;j++)
+    <br>&nbsp;{
+     <br>&nbsp;   if(a[j]!=c[j])
+        <br>&nbsp;  d[j]=a[j];
+       <br>&nbsp; else
+       <br>&nbsp; continue;
+        
+    <br>}
+    <br>&nbsp;int size=sizeof(d);
+    <br>&nbsp;printf("missing elements are\n");
+    <br>&nbsp;for(int i=0;i<&nbsp;size;i++)
+    <br>&nbsp;printf("%d\t",d[i]);
+
+    <br>&nbsp;getch();
+<br>}
+<br>
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
