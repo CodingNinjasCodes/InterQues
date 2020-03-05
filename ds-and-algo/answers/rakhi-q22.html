@@ -1,0 +1,100 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            Data Structure | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="reverse of singly linked list">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt; Reverse of nodes in singly linked list.when nodes are present in singly linked list 
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4>Reversing the nodes of singly linked list. </h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet for :<strong>reversing tne nodes of singly linked list </strong>
+                </p>
+
+                <code>
+                    &nbsp;&nbsp;#ncludestdio.h<br>
+                    {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;struct node<br>
+                        {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int info;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct node*link;<br>
+                        }<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;struct node *START=NULL;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;struct node*createNode()<br>
+                        {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; struct node*n;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n=(struct node *)malloc(sizeof(struct node));<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return(n);<br>
+                        }<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;voidreversethenode()<br>
+                        {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct node*temp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp=createNode();<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct node*r1,*r2;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r1=r2=NULL;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(START==NULL<br>)
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("list is empty");<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else{<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while(START!=NULL)<br>
+                                {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r1=START->next;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;START->next=r2;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r2=START;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; START=r1<br>
+                                }<br>
+                         &nbsp;}<br>
+                        &nbsp;&nbsp;}<br>
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
