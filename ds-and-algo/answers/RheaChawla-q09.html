@@ -1,0 +1,93 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            Data Structure | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="To count the number of words in a string using HashMap in java">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt; Difference between notify() and notifyall() method in java?
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4>To count the number of words in a string using HashMap in java</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet for :<strong>To count the number of words in a string using HashMap in java</strong>
+                </p>
+
+                <code>
+                &nbsp;&nbsp;import java.util.HashMap;<br>
+ 
+                &nbsp;&nbsp;   public class FinalCountWords {<br>
+                     
+                    &nbsp;&nbsp;        public static void main(String[] args) {<br>
+                    &nbsp;&nbsp;   // TODO Auto-generated method stub<br>
+                    &nbsp;&nbsp;        String str = "This this is is done by Saket Saket";<br>
+                    &nbsp;&nbsp;        String[] split = str.split(" ");<br>
+                    &nbsp;&nbsp;        HashMap<String,Integer> map = new HashMap<String,Integer>();<br>
+                    &nbsp;&nbsp;        for (int i=0; i&lt;split.length-1; i++) { <br>
+                         
+                                          
+                          
+                    &nbsp;&nbsp; &nbsp;&nbsp;            if (map.containsKey(split[i])) { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                int count = map.get(split[i]);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    map.put(split[i], count+1);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;            else {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                map.put(split[i], 1);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;            }<br>
+                    &nbsp;&nbsp;        }<br>
+                    &nbsp;&nbsp;        System.out.println(map);<br>
+                    &nbsp;&nbsp;   }<br>
+                     
+                    }
+                </code>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
