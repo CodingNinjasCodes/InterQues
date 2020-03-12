@@ -1,11 +1,12 @@
 // function to display a list of all contributors GitHub username on the homepage
 (function getContributorsUsernames(){
-    fetch('https://api.github.com/repos/CodingNinjasCodes/InterQues/contributors')
+    fetch('https://api.github.com/repos/CodingNinjasCodes/InterQues/contributors?per_page=100&page=1')
     .then(function(res){
         return res.json();
     })
     .then(function(data){
         // console.log(data);
+        // console.log(data.length);
 
         var body = document.getElementsByTagName("body")[0];
         var tbl = document.createElement("table");
@@ -20,8 +21,8 @@
 
             count++;
 
-            if(count == 7){
-                console.log(count);
+            if(count == 8){
+                // console.log(count);
                 count = 1;
                 tblBody.appendChild(row);
                 var row = document.createElement("tr");
