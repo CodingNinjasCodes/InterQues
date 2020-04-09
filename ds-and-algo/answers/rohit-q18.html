@@ -1,0 +1,139 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+           Data Structures And Algorithms | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Puppy Treat (Array)">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt;Find next greater number with same set of digits (Array)
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    Find next greater number with same set of digits (Array)
+                </h4>
+                <p>
+                    Given a number n, find the smallest number that has same set of digits as n and is greater than n. If n is the greatest possible number with its set of digits, then print “not possible”.
+                    <br><br><strong>Sample test case:</strong><br><br>
+                </p>
+                    
+                    <ol>
+                        <li>Input:  n = "1234" <br>
+                        Output: "1243"</li>
+                        <br>
+                        <li>Input: n = "4321" <br>
+                        Output: "Not Possible"</li>
+                        <br>
+                        <li>Input: n = "534976" <br>
+                        Output: "536479"
+                        </li>
+                    </ol>
+                
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Approach:</strong> 
+                <p>
+                   Following are few observations about the next greater number.<br>
+1) If all digits sorted in descending order, then output is always “Not Possible”.<br> For example, 4321.<br><br>
+2) If all digits are sorted in ascending order, then we need to swap last two digits.<br> For example, 1234.<br><br>
+3) For other cases, we need to process the number from rightmost side (why? because we need to find the smallest of all greater numbers)
+               </p>
+                <hr>
+                <p>
+                <b>Following is the algorithm for finding the next greater number.</b><br>
+
+<br>
+I) Traverse the given number from rightmost digit, keep traversing till you find a digit which is smaller than the previously traversed digit. For example, if the input number is “534976”, we stop at 4 because 4 is smaller than next digit 9. If we do not find such a digit, then output is “Not Possible”.
+<br><br>
+II) Now search the right side of above found digit ‘d’ for the smallest digit greater than ‘d’. For “534976″, the right side of 4 contains “976”. The smallest digit greater than 4 is 6.
+<br><br>
+III) Swap the above found two digits, we get 536974 in above example.
+<br><br>
+IV) Now sort all digits from position next to ‘d’ to the end of number. The number that we get after sorting is the output. For above example, we sort digits in bold 536974. We get “536479” which is the next greater number for input 534976.
+
+                </p>
+                <hr>
+                <strong>Code:</strong> 
+                <pre>
+#include&lt;bits/stdc++.h>
+#include&lt;vector>
+using namespace std;
+int main()
+ {
+       int n;
+       cin>>n;
+       vector&lt;int> arr;
+       for(int i=0;i&lt;n;i++)
+       {
+           int de;
+           cin>>de;
+           arr.push_back(de);
+       }
+       int i=n-1;
+       for(;i>0;i--)
+       {
+           if(arr[i]>arr[i-1])break;
+       }
+       
+           int x = arr[i-1],temp = i-1;
+           int j=i;
+           for(i=j+1;i&lt;n;i++)
+           {
+               if(arr[i]>x)
+               {
+                   if(arr[i]&lt;arr[j])
+                   {
+                       j=i;
+                   }
+               }
+           }
+           arr[temp] = arr[j];
+           arr[j]=x;
+           
+           sort(arr.begin()+temp+1 , arr.end());
+           
+           for(int i=0;i&lt;n;i++)
+           {
+               cout&lt;&lt;arr[i]&lt;&lt;
+           }
+
+	return 0;
+}
+                </pre>
+
+            </div>
+        </div>
+
+        <hr>
+        
+    </body>
+</html>
