@@ -1,0 +1,193 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            HTML | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="How can we contain the image within a Div?">
+       
+        <style type="text/css">
+            #before
+                {
+
+                    display: flex;
+                    width:90%;
+                    height: 250px;
+                    box-sizing: border-box;
+                    border: 2px solid grey;
+                    justify-content: space-between;
+                    align-items: center;
+
+                }
+
+                #before-code
+                {
+                    width: 30%;
+                    height: 100%;
+                        box-sizing: border-box;
+                    border: 2px solid grey;
+
+                }
+
+                #before-HTML
+                {
+                    width: 30%;
+                    height: 100%;
+                        box-sizing: border-box;
+                    border: 2px solid grey;
+
+                }
+
+                #before-CSS
+                {
+                    width: 30%;
+                    height: 100%;
+                        box-sizing: border-box;
+                    border: 2px solid grey;
+                }
+
+                #imagee
+                {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                #heading
+                {
+                    display: flex;
+                    width: 90%;
+                    height: 10px;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+        </style>
+    </head>
+    <body>
+		
+		<img src="../../assets/CN_logo.png" height="72px" alt="Coding Ninjas Logo" />
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">HTML Questions</a>
+                    &gt; How can we contain the image within a Div?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <content>
+            <div>
+                <h4>
+                    <h4>How can we contain the image within a Div?</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <article>
+                <strong>Answer:</strong> 
+                If we have a div , and we want that image should automatically adjust according to the size of div then we can take the help of the CSS property that is : Object-fit.
+                <br>
+                object-fit can be set with one of these five values:
+                <br>
+                <ol>
+                    <li>
+               <b> fill </b>: this is the default value which stretches the image to fit the content box, regardless of its aspect-ratio.
+                 </li>
+                 <li>
+                <b>contain</b>: increases or decreases the size of the image to fill the box whilst preserving its aspect-ratio.
+                </li>   
+                <li>
+                <b>cover </b>: the image will fill the height and width of its box, once again maintaining its aspect ratio but often cropping the image in the process.
+            </li>
+            <li>
+             <b>   none</b>: image will ignore the height and width of the parent and retain its original size.
+            </li>
+            <li>
+           <b> scale-down</b>: the image will compare the difference between none and contain in order to find the smallest concrete object size.
+        </li>
+</ol>
+
+            <div id="heading">
+               <h3>
+                Screen-Shot
+               </h3>
+
+               <h3>
+                HTML CODE
+               </h3>
+               <h3>
+                   CSS CODE
+               </h3>
+           </div>
+            </div>
+            <h3>
+                Before
+            </h3>
+
+            <div id="before">
+                <div id="before-code">
+
+                    <img id="imagee" src="../../assets/images/vineet30222/before.jpg">
+                </div>
+
+                <div id="before-HTML">
+                     <img id="imagee" src="../../assets/images/vineet30222/before_html.jpg">
+                </div>
+
+                <div id="before-CSS">
+                     <img id="imagee" src="../../assets/images/vineet30222/before_css.jpg">
+                </div>
+
+            </div>
+             <h3>
+                After
+            </h3>
+
+            <div id="before">
+                <div id="before-code">
+                     <img id="imagee" src="../../assets/images/vineet30222/after.jpg">
+                </div>
+
+                <div id="before-HTML">
+                     <img id="imagee" src="../../assets/images/vineet30222/after_html.jpg">
+                </div>
+
+                <div id="before-CSS">
+                     <img id="imagee" src="../../assets/images/vineet30222/after_css.jpg">
+                </div>
+
+            </div>
+            </article>
+        </content>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
