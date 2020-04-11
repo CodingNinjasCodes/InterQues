@@ -1,0 +1,167 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+           Data Structures And Algorithms | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Puppy Treat (Array)">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt;LRU Cache
+                </small>
+            </p>
+        </div>
+
+        <div> 
+           <div>
+               <h4>
+                   What is LRU Cache ? Design and Implement the LRU Cache.
+
+               </h4>
+
+               <p>
+                 A <strong>Least Recently Used (LRU) </strong> Cache organizes items in order of use, allowing you to quickly identify which item hasn't been used for the longest amount of time.
+               </p>
+           </div>
+
+           <div>
+             <h4>
+               Implementation:--
+             </h4>
+             <p>
+               We have possible page number and given cache memory size.The LRU caching scheme removes the least recently used frame when the cache is full and a new page is referenced which is not there in cache
+             </p>
+
+           </div>
+          <hr>
+          <strong>Code:-</strong>
+
+        </div>
+
+        
+          <p>Assuming we have  LRU size = 4</p>
+
+        <pre>
+ import java.util.HashMap;
+class Entry {
+   int value;
+   int key;
+   Entry left;
+   Entry right;
+}
+public class LRUCache {
+
+    HashMap<Integer, Entry> hashmap;
+    Entry start, end;
+    int LRU_SIZE = 4;    // Here i am setting 4 to test the LRU cache
+            
+  public LRUCache() {
+    hashmap = new HashMap<Integer, Entry>();
+  }
+
+  public int getEntry(int key) {
+        if (hashmap.containsKey(key)) // Key Already Exist, just update the
+        {
+            Entry entry = hashmap.get(key);
+            removeNode(entry);
+            addAtTop(entry);
+            return entry.value;
+        }
+        return -1;
+  }
+
+  public void putEntry(int key, int value) {
+    if (hashmap.containsKey(key))     // Key Already Exist, just update the value and move it to top
+    {
+          Entry entry = hashmap.get(key);
+          entry.value = value;
+          removeNode(entry);
+          addAtTop(entry);
+    } else {
+          Entry newnode = new Entry();
+          newnode.left = null;
+          newnode.right = null;
+          newnode.value = value;
+          newnode.key = key;
+      if (hashmap.size() > LRU_SIZE)   // We have reached maxium size so need to make room for new element.
+      {
+          hashmap.remove(end.key);
+          removeNode(end);        
+          addAtTop(newnode);
+
+      } else {
+          addAtTop(newnode);
+      }
+
+          hashmap.put(key, newnode);
+    }
+  }
+  public void addAtTop(Entry node) {
+          node.right = start;
+          node.left = null;
+          if (start != null)
+            start.left = node;
+          start = node;
+          if (end == null)
+            end = start;
+  }
+
+  public void removeNode(Entry node) {
+
+    if (node.left != null) {
+      node.left.right = node.right;
+    } else {
+      start = node.right;
+    }
+
+    if (node.right != null) {
+      node.right.left = node.left;
+    } else {
+      end = node.left;
+    }
+  }
+  public static void main(String[] args) throws java.lang.Exception {
+    // Main Function
+    LRUCache lrucache = new LRUCache();
+    lrucache.putEntry(1, 1);
+    lrucache.putEntry(10, 15);
+    lrucache.putEntry(15, 10);
+    lrucache.putEntry(10, 16);
+    lrucache.putEntry(12, 15);
+    lrucache.putEntry(18, 10);
+    lrucache.putEntry(13, 16);
+
+    System.out.println(lrucache.getEntry(1));
+    System.out.println(lrucache.getEntry(10));
+    System.out.println(lrucache.getEntry(15));
+
+  }
+}
+        </pre>
+        
+ 
+        
+    </body>
+</html>
