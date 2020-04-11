@@ -1,0 +1,165 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+           Data Structures And Algorithms | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="How do you find the largest and smallest number in an unsorted integer array?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt;Rotting oranges question
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4>Rotting oranges question</h4>
+                </h4>
+                <div><p>In a given grid, each cell can have one of three&nbsp;values:</p>
+
+<ul>
+	<li>the value <code>0</code> representing an empty cell;</li>
+	<li>the value <code>1</code> representing a fresh orange;</li>
+	<li>the value <code>2</code> representing a rotten orange.</li>
+</ul>
+
+<p>Every minute, any fresh orange that is adjacent (4-directionally) to a rotten orange becomes rotten.</p>
+
+<p>Return the minimum number of minutes that must elapse until no cell has a fresh orange.&nbsp; If this is impossible, return <code>-1</code> instead.</p>
+
+<p>&nbsp;</p>
+
+<div>
+<p><strong>Example 1:</strong></p>
+
+<p><strong><img alt="" src="../../assets/images/sauravabc16/oranges.png" style="width: 712px; height: 150px;"></strong></p>
+
+<pre><strong>Input: </strong><span id="example-input-1-1">[[2,1,1],[1,1,0],[0,1,1]]</span>
+<strong>Output: </strong><span id="example-output-1">4</span>
+</pre>
+
+<div>
+<p><strong>Example 2:</strong></p>
+
+<pre><strong>Input: </strong><span id="example-input-2-1">[[2,1,1],[0,1,1],[1,0,1]]</span>
+<strong>Output: </strong><span id="example-output-2">-1</span>
+<strong>Explanation: </strong> The orange in the bottom left corner (row 2, column 0) is never rotten, because rotting only happens 4-directionally.
+</pre>
+
+<div>
+<p><strong>Example 3:</strong></p>
+
+<pre><strong>Input: </strong><span id="example-input-3-1">[[0,2]]</span>
+<strong>Output: </strong><span id="example-output-3">0</span>
+<strong>Explanation: </strong> Since there are already no fresh oranges at minute 0, the answer is just 0.
+</pre>
+
+<p>&nbsp;</p>
+
+<p><strong>Note:</strong></p>
+
+<ol>
+	<li><code>1 &lt;= grid.length &lt;= 10</code></li>
+	<li><code>1 &lt;= grid[0].length &lt;= 10</code></li>
+	<li><code>grid[i][j]</code> is only <code>0</code>, <code>1</code>, or <code>2</code>.</li>
+</ol>
+</div>
+</div>
+</div>
+
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet to help you out.
+                </p>
+
+                <code>
+
+			 class Solution {<br>
+    int[] dr = new int[]{-1, 0, 1, 0};<br>
+    int[] dc = new int[]{0, -1, 0, 1};<br>
+<br>
+    public int orangesRotting(int[][] grid) {<br>
+        int R = grid.length, C = grid[0].length;<br>
+
+        // queue : all starting cells with rotten oranges<br>
+        Queue<Integer> queue = new ArrayDeque();<br>
+        Map<Integer, Integer> depth = new HashMap();<br>
+        for (int r = 0; r < R; ++r)<br>
+            for (int c = 0; c < C; ++c)<br>
+                if (grid[r][c] == 2) {<br>
+                    int code = r * C + c;<br>
+                    queue.add(code);<br>
+                    depth.put(code, 0);<br>
+                }<br>
+<br>
+        int ans = 0;<br>
+        while (!queue.isEmpty()) {<br>
+            int code = queue.remove();<br>
+            int r = code / C, c = code % C;<br>
+            for (int k = 0; k < 4; ++k) {<br>
+                int nr = r + dr[k];<br>
+                int nc = c + dc[k];<br>
+                if (0 <= nr && nr < R && 0 <= nc && nc < C && grid[nr][nc] == 1) {<br>
+                    grid[nr][nc] = 2;<br>
+                    int ncode = nr * C + nc;<br>
+                    queue.add(ncode);<br>
+                    depth.put(ncode, depth.get(code) + 1);<br>
+                    ans = depth.get(ncode);<br>
+                }<br>
+            }<br>
+        }<br>
+<br>
+        for (int[] row: grid)<br>
+            for (int v: row)<br>
+                if (v == 1)<br>
+                    return -1;<br>
+        return ans;<br>
+<br>
+    }<br>
+}<br>
+
+                </code>
+            </div>
+        </div> 
+        <p><strong>Complexity Analysis</strong></p>
+        <ul>
+<li>
+<p>Time Complexity:  O(N) where N is the number of cells in the grid.</p>
+</li>
+<li>
+<p>Space Complexity:  O(N) where N is the number of cells in the grid.
+<br>
+<br></p>
+</li>
+</ul>
+    </body>
+</html>
+
