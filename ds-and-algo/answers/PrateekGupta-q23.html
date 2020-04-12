@@ -1,0 +1,76 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+
+        <title>
+            Data Structures and Algorithms | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+        <link rel="stylesheet" href="../../assets/css/questions-list-style.css">
+
+        <meta name="description" content="Find a key in a bitonic sequence efficiently">
+    </head>
+    <body>
+
+        <div>
+            <a href="../../index.html">
+              <img src="../../assets/CN_logo.png" height="72px" alt="Coding Ninjas Logo" />
+            </a>
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">Data Structures and Algorithms Questions</a>
+                    &gt;Find an element in Bitonic array
+
+                </small>
+            </p>
+        </div>
+
+        <div>
+            <div>
+                <h4>Find an element in Bitonic array</h4>
+            </div>
+            <div>
+                <strong>Answer:</strong>
+
+                <ul>
+                 <p>The solution is Based on binary Search</p>
+                 <p>The idea is to find the bitonic point k which is the index of the maximum element of given sequence. If the element to be searched is greater than maximum element return -1, else search the element in both halves. Below is the step by step algorithm on how to do this.</p>
+                 <li>Find the bitonic point in the given array, i.e the maximum element in the given bitonic array. This can be done in log(n) time by modifying the binary search algorithm. You can refer to this post on how to do this.</li>
+                 <li>If the element to be searched is equal to the element at bitonic point then print the index of bitonic point.</li>
+                 <li>If the element to be searched is greater than element at bitonic point then element does not exist in the array.</li>
+                 <li>If the element to be searched is less than element at bitonic point then search for element in both half of the array using binary search.</li>
+                 <p><b>Time complexity: </b>O(logn)</p>
+                 <p><b>Space complexity: </b>O(1)</p>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+
+            </ul>
+        </div>
+
+    </body>
+</html>
