@@ -1,0 +1,76 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            Data Structures and Algorithms | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Best Time To Buy And Sell">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt; Best Time to Buy and Sell Stock II
+
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4>Best Time to Buy and Sell Stock II</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Here's a code snippet find Best Time to Buy and Sell Stock II
+                </p>
+
+                <code>
+                    <br><br>
+                    public int maxProfit(int[] prices) {
+                        int n=prices.length;
+                        int total=0;
+                       for(int i=0; i &lt n-1; i++)
+                       {
+                           if(prices[i] &lt prices[i+1]){
+                               total= total + prices[i+1]-prices[i];
+                           }
+                       }
+                       return total; 
+                    }
+                </code>
+                <br><br>
+                
+            </div>
+        </div>
+
+        <hr>
+
+     
+        
+    </body>
+</html>
