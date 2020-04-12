@@ -1,0 +1,100 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content=" What is a difference between call,apply and bind in JavaScript?">
+    </head>
+    <body>
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; What is a difference between call,apply and bind in JavaScript?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                   Q: What is a difference between call,apply and bind in JavaScript?
+                </h4>
+                
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+            
+                <p>
+                    <ul type="square">
+                        <li>All three call,apply and bind are prototype methods of function that means you can execute
+                            these methods on any function.
+                        </li>
+                        <li>
+                            All three methods are used to execute the function in explicit context where <strong>this</strong> keyword refers
+                            to the first argument passed in method.
+                        </li>
+                        <li>
+                            call() - accepts the function arguments as comma separated values arg1,arg2<br>
+                            <code>
+                                functionName.call(thisArg,arg1,arg2,...)
+                            </code>
+                        </li>
+                        <li>
+                            apply() - accepts the function arguments as array of values[arg1,arg2..]<br>
+                            <code>
+                                functionName.apply(this.Arg, [arg1,arg2,..])
+                            </code>
+                        </li>
+                        <li>
+                            bind() - returns a new bounded function which can be executed later.<br>
+                            <code>
+                                functionName.bind(thisArg)
+                            </code>
+                        </li>
+                        <li>
+                            call() and apply() methods are executed immediately whereas bind() method return a new
+                            bounded function which can be executed later.
+                        </li>
+                    </ul>   
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
