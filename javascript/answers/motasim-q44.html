@@ -16,7 +16,7 @@
 
         <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
 
-        <meta name="description" content="What is a JavaScript Promise?">
+        <meta name="description" content="What would following code return?">
     </head>
     <body>
 
@@ -30,7 +30,7 @@
 
                     <a href="../../index.html">Home</a>
                     &gt; <a href="../index.html">JavaScript Questions</a>
-                    &gt; What is a JavaScript Promise?
+                    &gt; What would following code return?
 
                 </small>
                
@@ -41,8 +41,12 @@
         <div>
             <div>
                 <h4>
-                    What is a JavaScript Promise?
+                    What would following code return? 
                 </h4>
+                <code>
+                    console.log(typeof typeof 1);
+                </code>
+
                
             </div>
             <br>
@@ -50,13 +54,10 @@
             <div>
                 <strong>Answer:</strong> 
                 <p>
-                    A promise in JavaScript is exactly what it sounds like - you use it to make a promise to do something, usually asynchronously. When the task completes, you either fulfill your promise or fail to do so. <code>Promise</code> is a constructor function, so you need to use the <code>new</code> keyword to create one. It takes a function, as its argument, with two parameters - <code>resolve</code> and <code>reject</code>. These are methods used to determine the outcome of the promise. The syntax looks like this:
+                   <code>string</code>
                 </p>
                 <code>
-                    const myPromise = new Promise((resolve, reject) => {
-                    <br>
-                    <br>
-                    });
+                    <code>typeof</code> 1 will return <code>"number"</code> and <code>typeof "number"</code> will return <code>"string"</code>.
                 </code>
             </div>
         </div>
