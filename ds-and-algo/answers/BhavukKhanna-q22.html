@@ -1,0 +1,93 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            Data Structure | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="Unique Binary Search Trees">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html"> Data Structures and Algorithms Questions</a>
+                    &gt; Unique Binary Search Trees
+                </small>
+            </p>
+        </div>
+        
+        <div>
+            <div>
+                <h4>
+                    <h4>Unique Binary Search Trees</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <div>
+                    <p>Given n, how many structurally unique BST's (binary search trees) that store values 1 ... n?</p>
+                    <h4>Example:</h5>
+
+                    Input: 3<br>
+                    Output: 5<br>
+                    Explanation:<br>
+                    Given n = 3, there are a total of 5 unique BST's:<br>
+                    <img src="../../assets/images/bhavuk-khanna/2020-04-12_124759.jpg">
+                </div>
+                <h4>Answer:</h4>
+                <div>
+                    <code>
+                        class Solution { <br>
+                        &nbsp;public int numTrees(int n) {<br>
+                        &nbsp;&nbsp;int dp[] = new int[n+1];<br>
+                        &nbsp;&nbsp;if(n==0)<br>
+                        &nbsp;&nbsp;return 1;<br>
+        
+                        &nbsp;&nbsp;dp[0]=1;<br>
+                        &nbsp;&nbsp;dp[1]=1;<br>
+        
+                        &nbsp;&nbsp;for(int i=2;i&gt;dp.length;i++){<br>
+                        &nbsp;&nbsp;&nbsp;for(int j=1;j&gt;=i;j++){<br>
+                        &nbsp;&nbsp;&nbsp;dp[i] += dp[j-1]*dp[i-j]; <br>
+                        &nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;    }<br>
+                        &nbsp;return dp[n];<br>
+                        &nbsp;}<br>
+                    }<br>
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+        
+    </body>
+</html>
