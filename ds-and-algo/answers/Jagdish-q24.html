@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-157837769-1");
+    </script>
+
+    <title>
+      Data Structures and Algorithms Questions | InterQues | Coding Ninjas
+    </title>
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../assets/favicon.png"
+    />
+
+    <meta
+      name="description"
+      content="Find Unique Element in the given array using HashSet. "
+    />
+  </head>
+  <body>
+    <div>
+      <img
+        src="../../assets/CN_logo.png"
+        height="72px"
+        alt="Coding Ninjas Logo"
+      />
+    </div>
+
+    <div>
+      <p>
+        <small>
+          <a href="../../index.html">Home</a>
+          &gt;
+          <a href="../index.html"> Data Structures and Algorithms Questions</a>
+          &gt; Find the count of distinct element in given array.
+        </small>
+      </p>
+    </div>
+
+    <div>
+      <div>
+          <p>Find the count of distinct elementn in the given array in O(n) time .</p>
+        <h4>Example:</h4>
+            Input : {1, -1, 6, 9, 6, 8, 8,6}<br>
+            Output : 6 <br>
+      </div>
+      <br />
+      <div>
+        <strong>Answer:</strong>
+
+        <p>We can use HashSet in Java to find the count of distinct element.</p>
+        <code>
+          <pre>
+          import java.util.*;
+          class Codechef {
+              public static void main(String args[]){
+                    
+                    // Scanner for input
+                    Scanner sc = new Scanner(System.in);
+                    int n = sc.nextInt();
+
+                    // array of size n
+                    int arr[] = new int[n];
+
+                    for(int i = 0 ; i &lt; n ; i++){
+                        arr[i] = sc.nextInt();
+                    }
+
+                    HashSet<Integer> set = new HashSet &lt;&gt;();
+
+                    // for each loop
+                    for(int x : arr){
+                        set.add(x);
+                    }
+
+                    // count of distinct elements in array
+                    System.out.println(set.size());
+              }
+          }
+        </pre>
+        </code>
+      </div>
+    </div>
+
+    <hr />
+
+    <div>
+      <h5>
+        Similar Questions
+      </h5>
+      <ul></ul>
+    </div>
+  </body>
+</html>
