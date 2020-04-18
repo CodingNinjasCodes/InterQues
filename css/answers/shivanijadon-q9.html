@@ -1,0 +1,98 @@
+<html>
+
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+    </script>
+
+    <title>
+        CSS | InterQues | Coding Ninjas
+    </title>
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png" />
+
+    <meta name="description" content="How to prioritize the CSS property of an element?">
+</head>
+
+<body>
+
+    <div>
+        <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+    </div>
+
+    <div>
+        <p>
+            <small>
+
+                <a href="../../index.html">Home</a>
+                &gt; <a href="../index.html">CSS Questions</a>
+                &gt; How to prioritize the CSS property of an element?
+
+            </small>
+
+        </p>
+    </div>
+    <div>
+        <div>
+            <h2>How to prioritize the CSS property of an element?</h2>
+        </div>
+        <div>
+            <strong>Answer:</strong>
+            <p>
+                !important
+            </p>
+            <p>
+                Writing !important beside a CSS rule gives it a higher priority with respect to previously defined rule. No other rule can override it. It has higher priority than Class and Id Selectors.
+                The !important property in CSS means that all subsequent rules on an element are to be ignored, and the rule denoted by !important is to be applied. This rule overrides all previous styling rules ​and the !important property increases its priority.
+            </p> 
+            <p>
+                The !important property is mentioned immediately before the semicolon and at the end of the CSS rule before terminating it.
+            </p>
+            <div>
+                <code>
+                    h1 { <br/>
+                        color: blue ; <br/>
+                    } <br/><br/>
+                    h1 { <br/>
+                        color: #FF8882 !important; //important property <br/>
+                    } <br/><br/>
+                    body { <br/>
+                            background-color: #FBF2ED !important; <br/>
+                            text-align:center; <br/>
+                            background-color: red; <br/>
+                        } <br/><br/>
+                </code>
+            </div>
+            <div>
+                <img src="../../assets/images/shivanijadon/important_output.png">
+            </div>
+            <p>
+                In the code above, the normal color for the h1 tag was blue but, because of the !important property, a different color is applied. Similarly, a different color is applied to the background instead of red.
+            </p>
+            <p>
+                <strong>Note:</strong>
+                It is not advisable to use !important property very often.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div>
+        <h5>
+            Similar Questions
+        </h5>
+        <ul>
+
+        </ul>
+    </div>
+
+</body>
+
+</html>
