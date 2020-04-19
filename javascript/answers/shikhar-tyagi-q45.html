@@ -1,0 +1,87 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+
+        <title>
+            JavaScript | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="How to declare an array inside MS SQL Server Stored Procedure?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">JavaScript Questions</a>
+                    &gt; How to declare an array inside MS SQL Server Stored Procedure? 
+
+
+                </small>
+
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                  How to declare an array inside MS SQL Server Stored Procedure? 
+                </h4>
+            </div>
+            <div>
+                <br>
+                <strong>Answer:</strong>
+                <p> 
+                    You could declare a table variable (Declaring a variable of type table):
+                </p>
+                <code>
+                    declare @MonthsSale table(monthnr int)<br>
+insert into @MonthsSale (monthnr) values (1)<br>
+insert into @MonthsSale (monthnr) values (2)<br>
+....
+                </code>
+                <p> 
+                    You can add extra columns as you like:
+                </p>
+                <code>
+                    declare @MonthsSale table(monthnr int, totalsales tinyint)
+                </code>
+                <p>You can update the table variable like any other table:</p>
+                <code>update m<br>
+set m.TotalSales = sum(s.SalesValue)<br>
+from @MonthsSale m<br>
+left join Sales s on month(s.SalesDt) = m.MonthNr<br>
+</code>
+             </div>
+        </div>
+
+        <hr>
+
+       <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+
+    </body>
+</html>
