@@ -1,0 +1,103 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+
+        <title>
+            Data Structures and Algorithms | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+        <link rel="stylesheet" href="../../assets/css/questions-list-style.css">
+
+        <meta name="description" content=" What is LCA in binary tree explain and how to find it in binary search tree">
+    </head>
+    <body>
+
+        <div>
+            <a href="../../index.html">
+              <img src="../../assets/CN_logo.png" height="72px" alt="Coding Ninjas Logo" />
+            </a>
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">Data Structures and Algorithms Questions</a>
+                    &gt; What is LCA in binary tree explain and how to find it in binary search tree .
+
+                </small>
+            </p>
+        </div>
+
+        <div>
+            <div>
+                <h4> What is LCA in binary tree explain and how to find lca for two node in binary search tree </h4>
+            </div>
+            <div>
+                <strong>Answer:</strong>
+
+                <ul>
+                  <h5>LCA in binary tree:</h5>
+                  <li>LCA stand for lowest common ancestor &nbsp let's take their are two node n1 & n2 in Binary Tree T then their lcs is defined as the most closest(lowest) node of which both are descendants</li>
+                 <li> <img src="../../assets/images/Vikas-Singh/BST_LCA.gif" alt="LCS DIAGRAM"></li>
+                 
+                    <ol>
+                        <li><h4>LCA of 10 and 14 is 12</h4></li>
+                        <li><h4>LCA of 8 and 22 is 20</h4></li>
+                        
+                    </ol>
+                    <li>
+                        so we can see when we come down in the tree T the node which most lowest and descendants of both node . Here we can think every node is descendants of itself
+                    </li>
+                    <li> <h3>Now lets' see how to solve this</h3></li>
+                    <br>
+                    <li> One thing is clear that we need to trasverse the tree and as it is bst it easy to do so during trasverse we use to find node n such that n1&lt;n&lt;n2 or n  is equal to one of given node</li>
+                    <ol>
+                        <li>Trasverse the tree for each node </li>
+                        <li> check if node n is greater than both node then the lcs lies on left side</li>
+                        <li>if node n is greater than both nodes than lcs lies on right side</li>
+                        <li> otherwise that node is your lcs return that </li> 
+                    </ol>
+                    <code>
+                        <ol>NOTE : <br>
+                            <li>Tree node is it has data ,left ,right</li>
+                            <li> tree has both node n1 and n2 present</li>
+                        </ol> 
+                        <ul><h4>Pseudo code</h4>
+                            <li> first check if node.data &gt;n1 && node.data &gt;n2 go to left  </li>
+                            <li> if first condition is false the check if node.data &lt;n1 && node.data &lt;n2 go to right </li>
+                            <li>At last if both condition fail then return node</li>
+                        </ul>
+                    </code>
+                </ul>
+                  <h5>Complexity analysis: </h5>
+                  <li>Time complexity :O(h) h->height of tree .</li>
+                  <li>Space complexity :O(h) recursive stack.</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+
+            </ul>
+        </div>
+
+    </body>
+</html>
