@@ -56,7 +56,8 @@ For making any changes (from your local system), just following the following st
 
 
 ## Support
-- Send an email directly to arpan(at)codingninjas(dot)in
+- For support, please create an **issue** regarding the same. We will help you out there.
+- To create an **issue**, go to the `Issues` tab, then select **New issue**.
 
 
 ## Code of conduct
