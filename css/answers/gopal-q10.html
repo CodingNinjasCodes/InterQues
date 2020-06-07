@@ -50,6 +50,27 @@
                 <strong>Answer:</strong> 
                 <p>
                     The p[lang] command is used for selecting all the elements of a paragraph. 
+                    <pre>
+                        For Example:
+                        <!DOCTYPE html>
+                        &lthtml&gt
+                            &lthead&gt
+                                &ltstyle&gt
+                                    p:lang(it) { 
+                                        background: yellow;
+                                    }
+                                &lt/style&gt
+                                &lt/head&gt
+                            &ltbody&gt
+
+                                &ltp&gtI live in Italy.&lt/p&gt
+                                &ltp lang="it"&gtCiao bella!&lt/p&gt
+
+                                &ltp&gt&ltb&gtNote:&lt/b&gt For :lang to work in IE8, a DOCTYPE must be declared.&lt/p&gt
+
+                                &lt/body&gt
+                                &lt/html&gt
+                    </pre>
                 </p>
             </div>
         </div>

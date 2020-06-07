@@ -51,6 +51,19 @@
                     If inorder traversal of a binary tree is sorted, then the binary tree is BST. 
                     The idea is to simply do inorder traversal and while traversing keep track of previous key value. 
                     If current key value is greater, then continue, else return false.
+                    <pre><code>
+                        private void inOrder(TreeNode node) {
+                            if (node == null) {
+                              return;
+                            }
+                        
+                            inOrder(node.left);
+                            System.out.printf("%s ", node.data);
+                            inOrder(node.right);
+                        }
+                        
+                    </code>
+                </pre>
                 </p>
             </div>
         </div>
