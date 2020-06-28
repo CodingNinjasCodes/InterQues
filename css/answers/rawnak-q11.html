@@ -1,0 +1,102 @@
+<html>
+    <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157837769-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157837769-1');
+        </script>
+        
+        <title>
+            CSS | InterQues | Coding Ninjas
+        </title>
+
+        <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+
+        <meta name="description" content="How to hide scrollbars but keep its functionality?">
+    </head>
+    <body>
+
+        <div>
+            <img src="../../assets/CN_logo.png" height='72px' alt="Coding Ninjas Logo">
+        </div>
+
+        <div>
+            <p>
+                <small>
+
+                    <a href="../../index.html">Home</a>
+                    &gt; <a href="../index.html">CSS Questions</a>
+                    &gt;  How to hide scrollbars but keep its functionality?
+
+                </small>
+               
+            </p>
+        </div>
+
+
+        <div>
+            <div>
+                <h4>
+                    <h4> How to hide scrollbars but keep its functionality?</h4>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <div>
+                <strong>Answer:</strong> 
+                <p>
+                    Sometimes we need to hide those default scroll-bars to make our page look more attractive.
+                    <br>
+                    There are options where we can make our scroll-bars more attractive. But most often, we are better off it.
+                    <br>
+                    <br>
+                    So to hide the scrollbars, but still be able to keep scrolling, we can use the following code:
+                    
+                    <br>
+                    <br>
+
+                    <code>
+                        Hide scrollbar for Chrome, Safari and Opera
+                        <br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;.example::-webkit-scrollbar {
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: none;
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                        <br>
+                        <br>
+                        Hide scrollbar for IE, Edge and Firefox
+                        <br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;.example {
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ms-overflow-style: none;  /* IE and Edge */
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollbar-width: none;  /* Firefox */
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                        <br>
+                    </code>
+                    <br>
+                    <br>
+                    <b>Note :</b>&nbsp;&nbsp;&nbsp;<i><u>overflow: hidden</u></i> &nbsp; will remove the complete functionality of the scrollbar and we will not be possible to scroll inside the page.
+                </p>
+                <br>
+            </div>
+        </div>
+            <hr>
+        <div>
+            <h5>
+                Similar Questions
+            </h5>
+            <ul>
+                
+            </ul>
+        </div>
+    </body>
+</html>
